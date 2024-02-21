@@ -1,0 +1,202 @@
+/* Reset default styles */
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #171e21; /* Background color set to black */
+}
+
+.headerbox {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+#logo {
+  border: none; /* Remove border from the button */
+  padding: 0; /* Remove padding */
+  width: 200px; /* Adjust the width as needed */
+  height: 60px;
+  background-color: transparent;
+  left: 0%; /* Align the button to the center horizontally */
+}
+
+.toggletheme {
+  border: none; /* Remove border from the button */
+  padding: 0; /* Remove padding */
+  background-image: url('transwhite.png');
+  background-color: transparent;
+  left: calc(50% - 25px); /* Align the button to the center horizontally */
+  transform: translateY(-35%)
+}
+
+.darktheme .toggletheme {
+  background-image: url('transwhite.png'); /* Dark theme background image */
+}
+
+.lighttheme .toggletheme {
+  background-image: url('transblack.png'); /* Light theme background image */
+}
+
+.togglelang .languagebox{
+  width: 100px;
+  height: 40px;
+}
+
+.toggletheme .lightbulb {
+  width: 37px; /* Set the width of the image */
+  height: 37px; /* Set the height of the image */
+  top: 1px; /* Adjust the vertical position */
+  border: none !important; /* Remove border */
+  outline: none; /* Remove outline */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  background-image: url('transwhite.png');
+}
+
+.toggletheme:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#logo:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Basic website structure */
+header {
+  text-align: left; 
+  padding: 0px;
+  color: #fff; /* Text color white for better contrast */
+}
+
+.darktheme {
+  /* Styles for dark theme */
+  background-color: #171e21;
+  color: #fff; /* Set text color to #ff8424 */
+}
+
+.lighttheme {
+  /* Styles for light theme */
+  background-color: #fff;
+  color: #000;
+}
+
+main {
+  padding: 0px;
+}
+
+footer {
+  background-color: #171e21; /* Footer with a slightly lighter shade of black */
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* Text color white for better contrast */
+}
+
+/* Title styling */
+h1 {
+  font-size: 2em;
+  margin-bottom: 0px;
+  color: #fff; /* Text color white for better contrast */
+}
+h1.lighttheme {
+  /* light theme styles */
+  background-color: #fff;
+  color: #000;
+}
+h1.darktheme {
+  /* dark theme styles */
+  background-color: #171e21;
+  color: #fff;
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+
+.language-dropdown {
+  display: none;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  background-color: #fff;
+  border:0;
+  padding: 0;
+  left: 296px; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  top:46px;
+}
+
+.language-dropdown img {
+  margin-bottom: 5px;
+  vertical-align: top;
+  display:flex;
+  width: 100px; /* Set the width of the flag images */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.language-dropdown.show {
+  display: block;
+}
+
+
+.rectangle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+  height: 60vh; /* Adjust the height as needed */
+  margin-left: 50px; /* Adjust the value as needed */
+}
+
+h2 {
+  margin:0;
+}
+
+.rectangle {
+  width: 160px; /* Adjust width as needed */
+  height: 90px; /* Adjust height as needed */
+  background-color: #ccc; /* Gray background */
+  border: 2px solid #000; /* Black border */
+  size:14px;
+}
+
+.rectangle-title {
+  text-decoration: none; /* Remove underline */
+  color: #ff8424; /* Blue color for text */
+  margin-right: 0; /* Remove unnecessary margin */
+}
+
+.lighttheme .rectangle-title {
+  color: #000; /* Set text color to #000 */
+}
+
+.darktheme .rectangle-title {
+  color: #fff; /* Set text color to #ff8424 */
+}
+
+.togglelang{
+  width: 100px; /* Set the width of the image */
+  height: 40px; /* Set the height of the image */
+  top: 1px; /* Adjust the vertical position */
+  margin-left: 10px;
+  border: none !important; /* Remove border */
+  outline: none; /* Remove outline */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  left: calc(50% - 25px); /* Align the button to the center horizontally */
+  transform: translateY(-35.5%);
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+.togglelang:hover
+{
+  cursor: pointer;
+}
+
