@@ -19,7 +19,9 @@ function loadJSON(file, callback) {
 
 
 function updateTextContent(language) {
-    loadJSON(language + '.json', function(response) {
+    const jsonFile = language === 'english' ? 'english.json' : 'russian.json';
+    
+    loadJSON(jsonFile, function(response) {
         try {
             var translations = response; // No need to parse JSON since fetch returns JSON data
             console.log(translations); // Log translations to verify they are loaded correctly
