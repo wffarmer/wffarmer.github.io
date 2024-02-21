@@ -19,6 +19,8 @@ function loadJSON(file, callback) {
 
 
 function updateTextContent(language) {
+    const encodedLanguage = encodeURIComponent(language);
+    
     const jsonFile = language === 'english' ? 'english.json' : 'russian.json';
     
     loadJSON(jsonFile, function(response) {
@@ -28,7 +30,7 @@ function updateTextContent(language) {
             Object.keys(translations).forEach(function(key) {
                 var elements = document.querySelectorAll('[data-translation="' + key + '"]');
                 elements.forEach(function(element) {
-                    element.innerText = translations[key];
+                    element.innerText = decodeURIComponent(translations[key]);
                 });
             });
         } catch (error) {
