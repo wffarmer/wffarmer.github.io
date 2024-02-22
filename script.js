@@ -47,7 +47,7 @@ function toggleLanguage(event) {
     let targetLanguage = event.target.alt.toLowerCase();
     
     // Set the language box image based on the target language
-    document.querySelector('.languagebox').src = targetLanguage === 'english' ? 'engflag.png' : 'rusflag.png';
+    document.querySelector('.languagebox').src = targetLanguage === 'english' ? 'transeng.png' : 'transrus.png';
     
     // Update the text content only if the target language is different from the current language
     if (currentLanguage !== targetLanguage) {
