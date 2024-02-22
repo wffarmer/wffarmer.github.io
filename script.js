@@ -31,16 +31,11 @@ function updateTextContent(language) {
 
                 var elements = document.querySelectorAll('[data-translation="' + key + '"]');
                 elements.forEach(function(element) {
-                    if (element.classList.contains('rectangle-title')) {
-                        // Update text color for "Lorem Ipsum" text
-                        element.style.color = '#ff8424'; // Orange color
-                    } else {
-                        // Update text content for other elements
-                        element.innerText = decodeURIComponent(translations[key]);
-                    }
+                    // Update text content for other elements
+                    element.innerText = decodeURIComponent(translations[key]);
+                    });
                 });
-            });
-        } catch (error) {
+            } catch (error) {
             console.error('Error parsing JSON:', error);
         }
     });
