@@ -28,9 +28,16 @@ function updateTextContent(language) {
             var translations = response; // No need to parse JSON since fetch returns JSON data
             console.log(translations); // Log translations to verify they are loaded correctly
             Object.keys(translations).forEach(function(key) {
+
                 var elements = document.querySelectorAll('[data-translation="' + key + '"]');
                 elements.forEach(function(element) {
-                    element.innerText = decodeURIComponent(translations[key]);
+                    if (element.classList.contains('rectangle-title')) {
+                        // Update text color for "Lorem Ipsum" text
+                        element.style.color = '#ff8424'; // Orange color
+                    } else {
+                        // Update text content for other elements
+                        element.innerText = decodeURIComponent(translations[key]);
+                    }
                 });
             });
         } catch (error) {
