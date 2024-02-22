@@ -115,14 +115,11 @@ h1.darktheme {
   }
 }
 
-
-
 .language-dropdown {
   display: none;
   width: 100px;
   height: 80px;
   position: absolute;
-  background-color: #fff;
   border:0;
   padding: 0;
   left: 296px; /* Center horizontally */
@@ -131,6 +128,7 @@ h1.darktheme {
 }
 
 .language-dropdown img {
+  background-color: transparent;
   margin-bottom: 5px;
   vertical-align: top;
   display:flex;
@@ -191,6 +189,7 @@ h2 {
   left: calc(50% - 25px); /* Align the button to the center horizontally */
   transform: translateY(-35.5%);
   cursor: pointer; /* Change cursor to pointer on hover */
+  background-color: transparent;
 }
 
 
@@ -199,4 +198,3 @@ h2 {
 {
   cursor: pointer;
 }
-
