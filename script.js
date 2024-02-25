@@ -99,7 +99,7 @@ logolink.addEventListener('click', (event) => {
 // Event listener for clicking the language button
 togglelang.addEventListener('click', function(event) {
     
-    languageBox.classList.add('show');
+    languageBox.classList.toggle('show');
     event.stopPropagation(); // Prevent the click event from propagating to the document
 });
 
