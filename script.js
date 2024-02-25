@@ -31,11 +31,11 @@ function updateTextContent(language) {
 
                 var elements = document.querySelectorAll('[data-translation="' + key + '"]');
                 elements.forEach(function(element) {
-                    // Update text content for other elements
                     element.innerText = decodeURIComponent(translations[key]);
-                    });
+                    
                 });
-            } catch (error) {
+            });
+        } catch (error) {
             console.error('Error parsing JSON:', error);
         }
     });
@@ -66,6 +66,7 @@ function toggleLanguage(event) {
 // Event listener for language options
 languageOptions.forEach(option => {
     option.addEventListener('click', toggleLanguage);
+    languageBox.classList.remove('show');
     });
 
 button.addEventListener('click', () => {
@@ -73,7 +74,7 @@ button.addEventListener('click', () => {
 
     body.classList.toggle(currentTheme);
     header.classList.toggle(currentTheme);
-    
+
     const currentLogo = logo.src;
     const darkLogoPath = 'darklogo.png';
     const lightLogoPath = 'lightlogo.png';
@@ -95,15 +96,33 @@ logolink.addEventListener('click', (event) => {
     }
 });
 
-function openLangbox() {
-    const dropdown = document.querySelector('.language-dropdown');
-    dropdown.classList.toggle('show');
-  }
-  document.addEventListener('click', function(event) {
-    const isLanguageButton = event.target.closest('.togglelang');
-    const dropdown = document.querySelector('.language-dropdown');
+// Event listener for clicking the language button
+togglelang.addEventListener('click', function(event) {
     
-    if (!isLanguageButton && dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
+    languageBox.classList.add('show');
+    event.stopPropagation(); // Prevent the click event from propagating to the document
+});
+
+togglelang.addEventListener('mouseenter', function(event) {
+    if (!languageBox.contains(event.relatedTarget)) {
+        languageBox.classList.add('show'); // Close the dropdown if the mouse is not moving into the dropdown
     }
+});
+
+// Event listener for moving mouse out of the language button
+togglelang.addEventListener('mouseleave', function(event) {
+    languageBox.classList.remove('show'); // Close the dropdown if the mouse is not moving into the dropdown
+});
+
+languageBox.addEventListener('mouseenter', function(event) {
+    languageBox.classList.add('show');
+})
+
+languageBox.addEventListener('mouseleave', function(event) {
+    languageBox.classList.remove('show');
+})
+
+
+document.addEventListener('click', function(event) {
+    languageBox.classList.remove('show'); // Close the dropdown
 });
