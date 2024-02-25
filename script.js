@@ -96,12 +96,9 @@ logolink.addEventListener('click', (event) => {
 
 // Event listener for clicking the language button
 togglelang.addEventListener('click', function(event) {
-    
-    if (languageBox.classList.contains('show')) {
-    languageBox.classList.remove('show');
-  } else {
-    languageBox.classList.add('show');
-  }
+    if (!languageBox.contains(event.relatedTarget)) {
+        languageBox.classList.toggle('show'); // Close the dropdown if the mouse is not moving into the dropdown
+    }
 });
 
 togglelang.addEventListener('mouseenter', function(event) {
