@@ -42,8 +42,6 @@ function updateTextContent(language) {
 }
 
 // Function to toggle language
-// Function to toggle language
-// Function to toggle language
 function toggleLanguage(event) {
     // Get the target language based on the clicked image
     let targetLanguage = event.target.alt.toLowerCase();
@@ -99,8 +97,11 @@ logolink.addEventListener('click', (event) => {
 // Event listener for clicking the language button
 togglelang.addEventListener('click', function(event) {
     
-    languageBox.classList.toggle('show');
-    event.stopPropagation(); // Prevent the click event from propagating to the document
+    if (languageBox.classList.contains('show')) {
+    languageBox.classList.remove('show');
+  } else {
+    languageBox.classList.add('show');
+  }
 });
 
 togglelang.addEventListener('mouseenter', function(event) {
