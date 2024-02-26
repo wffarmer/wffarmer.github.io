@@ -7,8 +7,6 @@ body {
   color: #ff8424; /* Default text color set to orange */
 }
 
-@media (min-width: 768px) {
-
 
 .headerbox {
   margin-bottom: 20px; /* Adjust margin as needed */
@@ -176,8 +174,6 @@ h1.darktheme {
   height:25px;
   margin-left: 22px;
   margin-top:1px;
-}
-
 }
 
 .rectangle-container {
