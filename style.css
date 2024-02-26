@@ -101,70 +101,37 @@ h1.darktheme {
 }
 
 @media (min-width: 768px) {
-  .language-dropdown {
-    display: none;
-    width: 100px;
-    height: 80px;
-    position: absolute;
-    border:0;
-    padding: 0;
-    left: 296px; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    top:46px;
-  }
   
-  .language-dropdown img {
-    background-color: transparent;
-    margin:0;
-    vertical-align: top;
-    display:flex;
-    width: 100px; /* Set the width of the flag images */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  }
-  
-  .language-dropdown.show {
-    display: block;
-  }
 
-  .togglelang{
-    width: 100px; /* Set the width of the image */
-    height: 40px; /* Set the height of the image */
-    top: 1px; /* Adjust the vertical position */
-    margin-left: 10px;
-    border: none !important; /* Remove border */
-    outline: none; /* Remove outline */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    left: calc(50% - 25px); /* Align the button to the center horizontally */
-    transform: translateY(-35.5%);
-    cursor: pointer; /* Change cursor to pointer on hover */
-    background-color: transparent;
-  }
-  
-  .togglelang .triangle {
-    background-color: transparent;
-    width: 16px;
-    border:0;
-    position: absolute;
-    left:100px; /* Adjust the positioning as needed */
-    top: 12px; /* Adjust the positioning as needed */
-    /*transition: transform 0.5s ease;*/
-  }
-  
-  .togglelang:hover .triangle {
-    transform: rotate(-90deg); /* Rotate the triangle 180 degrees on hover */
-  }
-  
-  
-  .togglelang:hover
-  {
-    cursor: pointer;
-  }
 
+  
 }
 
+.language-dropdown {
+  display: none;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  border:0;
+  padding: 0;
+  left: 296px; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  top:46px;
+}
 
+.language-dropdown img {
+  background-color: transparent;
+  margin:0;
+  vertical-align: top;
+  display:flex;
+  width: 100px; /* Set the width of the flag images */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.language-dropdown.show {
+  display: block;
+}
 
 
 .rectangle-container {
@@ -193,6 +160,41 @@ h2 {
   size:14px;
   border-radius: 10px;
   margin-bottom: 5px;
+}
+
+.togglelang{
+  width: 100px; /* Set the width of the image */
+  height: 40px; /* Set the height of the image */
+  top: 1px; /* Adjust the vertical position */
+  margin-left: 10px;
+  border: none !important; /* Remove border */
+  outline: none; /* Remove outline */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  left: calc(50% - 25px); /* Align the button to the center horizontally */
+  transform: translateY(-35.5%);
+  cursor: pointer; /* Change cursor to pointer on hover */
+  background-color: transparent;
+}
+
+.togglelang .triangle {
+  background-color: transparent;
+  width: 16px;
+  border:0;
+  position: absolute;
+  left:100px; /* Adjust the positioning as needed */
+  top: 12px; /* Adjust the positioning as needed */
+  /*transition: transform 0.5s ease;*/
+}
+
+.togglelang:hover .triangle {
+  transform: rotate(-90deg); /* Rotate the triangle 180 degrees on hover */
+}
+
+
+.togglelang:hover
+{
+  cursor: pointer;
 }
 
 #searchbar {
