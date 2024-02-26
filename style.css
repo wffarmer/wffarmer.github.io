@@ -191,10 +191,6 @@ h1.darktheme {
   margin-right: 0; /* Remove unnecessary margin */
 }
 
-h2 {
-  margin:0;
-}
-
 .rectangle {
   width: 160px; /* Adjust width as needed */
   height: 90px; /* Adjust height as needed */
