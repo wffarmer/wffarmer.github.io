@@ -7,6 +7,9 @@ body {
   color: #ff8424; /* Default text color set to orange */
 }
 
+@media (min-width: 768px) {
+
+
 .headerbox {
   margin-bottom: 20px; /* Adjust margin as needed */
   height:90px;
@@ -100,12 +103,6 @@ h1.darktheme {
   background-color: #171e21;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5em;
-  }
-}
-
 .language-dropdown {
   display: none;
   width: 100px;
@@ -130,35 +127,6 @@ h1.darktheme {
 
 .language-dropdown.show {
   display: block;
-}
-
-
-.rectangle-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Center content horizontally */
-  height: 60vh; /* Adjust the height as needed */
-  margin-left: 50px; /* Adjust the value as needed */
-}
-
-.rectangle-title {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit the color from the parent element */
-  margin-right: 0; /* Remove unnecessary margin */
-}
-
-h2 {
-  margin:0;
-}
-
-.rectangle {
-  width: 160px; /* Adjust width as needed */
-  height: 90px; /* Adjust height as needed */
-  background-color: #ccc; /* Gray background */
-  size:14px;
-  border-radius: 10px;
-  margin-bottom: 5px;
 }
 
 .togglelang{
@@ -207,4 +175,34 @@ h2 {
   height:25px;
   margin-left: 22px;
   margin-top:1px;
+}
+
+}
+
+.rectangle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+  height: 60vh; /* Adjust the height as needed */
+  margin-left: 50px; /* Adjust the value as needed */
+}
+
+.rectangle-title {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent element */
+  margin-right: 0; /* Remove unnecessary margin */
+}
+
+h2 {
+  margin:0;
+}
+
+.rectangle {
+  width: 160px; /* Adjust width as needed */
+  height: 90px; /* Adjust height as needed */
+  background-color: #ccc; /* Gray background */
+  size:14px;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
