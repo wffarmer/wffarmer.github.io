@@ -9,6 +9,7 @@ body {
 
 .headerbox {
   margin-bottom: 20px; /* Adjust margin as needed */
+  height:90px;
 }
 
 #logo {
