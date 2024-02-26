@@ -22,7 +22,6 @@ body {
   height: 60px;
   background-color: transparent;
   left: 0%; /* Align the button to the center horizontally */
-  margin-bottom:1px;
 }
 
 .toggletheme {
