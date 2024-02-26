@@ -188,7 +188,12 @@ h1.darktheme {
 .rectangle-title {
   text-decoration: none; /* Remove underline */
   color: inherit; /* Inherit the color from the parent element */
-  margin-right: 0; /* Remove unnecessary margin */
+  margin:0;
+  padding:0; /* Remove unnecessary margin */
+}
+
+h2 {
+  margin:0;
 }
 
 .rectangle {
@@ -197,5 +202,5 @@ h1.darktheme {
   background-color: #ccc; /* Gray background */
   size:14px;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
