@@ -7,6 +7,7 @@ const logolink = document.getElementById('logolink');
 const togglelang = document.querySelector('.togglelang');
 const languageBox = document.querySelector('.language-dropdown');
 const languageOptions = document.querySelectorAll('.language-dropdown img');
+const searchBar = document.getElementById('searchbar');
 
 let currentLanguage = 'english';
 
@@ -41,6 +42,8 @@ function updateTextContent(language) {
     });
 }
 
+// Function to toggle language
+// Function to toggle language
 // Function to toggle language
 function toggleLanguage(event) {
     // Get the target language based on the clicked image
@@ -124,4 +127,10 @@ languageBox.addEventListener('mouseleave', function(event) {
 
 document.addEventListener('click', function(event) {
     languageBox.classList.remove('show'); // Close the dropdown
+});
+
+searchBar.addEventListener('keyup', (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    // Implement your search logic here, filtering content based on searchTerm
+    console.log(`Search term: ${searchTerm}`); // Replace with your search logic
 });
