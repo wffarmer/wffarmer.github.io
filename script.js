@@ -92,8 +92,8 @@ button.addEventListener('click', () => {
 logolink.addEventListener('click', (event) => {
     const homepageURL = 'index.html';
 
-    if (window.location.pathname === '/' || window.location.pathname === homepageURL) {
-        event.preventDefault();
+    if (window.location.pathname !== homepageURL) {
+        window.location.href = homepageURL;
     }
 });
 
@@ -101,6 +101,7 @@ logolink.addEventListener('click', (event) => {
 togglelang.addEventListener('click', function(event) {
     if (!languageBox.contains(event.relatedTarget)) {
     languageBox.classList.add('show');
+    togglelang.querySelector('.triangle').style.transform = 'rotate(-90deg)';
     }
     event.stopPropagation(); // Prevent the click event from propagating to the document
 });
@@ -108,20 +109,28 @@ togglelang.addEventListener('click', function(event) {
 togglelang.addEventListener('mouseenter', function(event) {
     if (!languageBox.contains(event.relatedTarget)) {
         languageBox.classList.add('show'); // Close the dropdown if the mouse is not moving into the dropdown
+        togglelang.querySelector('.triangle').style.transform = 'rotate(-90deg)';
     }
 });
 
 // Event listener for moving mouse out of the language button
 togglelang.addEventListener('mouseleave', function(event) {
-    languageBox.classList.remove('show'); // Close the dropdown if the mouse is not moving into the dropdown
+    if (!languageBox.contains(event.relatedTarget)) {
+        languageBox.classList.remove('show'); // Close the dropdown if the mouse is not moving into the dropdown
+        togglelang.querySelector('.triangle').style.transform = 'rotate(0deg)';
+    }
 });
 
 languageBox.addEventListener('mouseenter', function(event) {
     languageBox.classList.add('show');
+    togglelang.querySelector('.triangle').style.transform = 'rotate(-90deg)';
 })
 
 languageBox.addEventListener('mouseleave', function(event) {
-    languageBox.classList.remove('show');
+    if (!togglelang.contains(event.relatedTarget)) {
+        languageBox.classList.remove('show');
+        togglelang.querySelector('.triangle').style.transform = 'rotate(0deg)';
+    }
 })
 
 
