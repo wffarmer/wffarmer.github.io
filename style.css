@@ -22,6 +22,7 @@ body {
   height: 60px;
   background-color: transparent;
   left: 0%; /* Align the button to the center horizontally */
+  margin-bottom: 1px;
 }
 
 .toggletheme {
@@ -151,7 +152,7 @@ h1.darktheme {
   position: absolute;
   left:100px; /* Adjust the positioning as needed */
   top: 12px; /* Adjust the positioning as needed */
-  /*transition: transform 0.5s ease;*/
+  /*transition: transform 0.5s ease;
 }
 
 .togglelang:hover .triangle {
