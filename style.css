@@ -194,3 +194,15 @@ h2 {
 {
   cursor: pointer;
 }
+
+#searchbar {
+  left:450px;
+  transform: translateY(-95%);
+  padding: 3px; /* Adjust padding as needed */
+  border: 1px solid #ccc; /* Add a border to the search bar */
+  border-radius: 8px; /* Add rounded corners */
+  font-size: 15px; /* Adjust font size as needed */
+  width: 100px; /* Adjust width as needed */
+  height:25px;
+  margin-left: 22px;
+}
