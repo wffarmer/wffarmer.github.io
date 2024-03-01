@@ -1,210 +1,70 @@
-/* Reset default styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #171e21; /* Background color set to black */
-  color: #ff8424; /* Default text color set to orange */
+:root{
+    --darkbg: rgb(23, 30, 33);
+    --lightbg: #fff;
+    --darkbgtext: #ff8424;
+    --lightbgtext: #000;
 }
 
-
-.headerbox {
-  margin-bottom: 20px; /* Adjust margin as needed */
-  height:90px;
+.hamburgermenu{
+    background-color: transparent;
+    flex-grow: 0;
+    width: 85px;
+    display: flex;
+    cursor: pointer;
+    align-self: flex-start;
+    box-sizing: inherit;
 }
 
-#logo {
-  border: none; /* Remove border from the button */
-  padding: 0; /* Remove padding */
-  width: 200px; /* Adjust the width as needed */
-  height: 60px;
-  background-color: transparent;
-  left: 0%; /* Align the button to the center horizontally */
-  margin-bottom: 0px;
+#burgerbars{
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 
-.toggletheme {
-  border: none; /* Remove border from the button */
-  padding: 0; /* Remove padding */
-  background-image: url('transwhite.png');
-  background-color: transparent;
-  left: calc(50% - 25px); /* Align the button to the center horizontally */
-  transform: translateY(-35%)
+#logo img{
+    height: 60px;
+    width: auto;
 }
 
-.darktheme .toggletheme {
-  background-image: url('transwhite.png'); /* Dark theme background image */
+body{
+min-height: 100vh;
+font-size: 14px;
+margin: 0;
 }
 
-.lighttheme .toggletheme {
-  background-image: url('transblack.png'); /* Light theme background image */
+.theme{
+    background-color: var(--darkbg);
+    display: block;
+    min-height: 100vh;
+
 }
 
-.togglelang .languagebox{
-  width: 100px;
-  height: 40px;
-  margin-bottom: 0px;
+.topmenu{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    box-sizing: inherit;
+    justify-content: space-between;
 }
 
-.toggletheme .lightbulb {
-  width: 37px; 
-  height: 37px; 
-  top: 1px; 
-  border: none !important; 
-  outline: none; 
-  padding: 0; 
-  margin: 0; 
-  background-image: url('transwhite.png');
-}
-a {
-  text-decoration: none; /* Remove default underline */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  display: inline-block; /* Ensure the link behaves as a block element */
-}
-.toggletheme:hover {
-  cursor: pointer; 
+.searchbox{
+    height: 60px;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 15px;
 }
 
-#logo:hover {
-  cursor: pointer; 
+#magglass{
+    padding-top: 3px;
+    padding-right: 5px;
+    width: 25px;
+    height:25px;
 }
 
-header {
-  text-align: left; 
-  padding: 0px;
-}
-
-.darktheme {
-  background-color: #171e21;
-  color: #ff8424;
-}
-
-.lighttheme {
-  background-color: #fff;
-  color: #000;
-}
-
-main {
-  padding: 0px;
-}
-
-footer {
-  background-color: #171e21;
-  padding: 20px;
-  text-align: center;
-  color: #ff8424; 
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 0px;
-}
-h1.lighttheme {
-  background-color: #fff;
-}
-h1.darktheme {
-  background-color: #171e21;
-}
-
-.language-dropdown {
-  display: none;
-  width: 100px;
-  height: 80px;
-  position: absolute;
-  border:0;
-  padding: 0;
-  left: 296px; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  top:46px;
-}
-
-.language-dropdown img {
-  background-color: transparent;
-  margin:0;
-  vertical-align: top;
-  display:flex;
-  width: 100px; /* Set the width of the flag images */
-  height: auto; /* Maintain aspect ratio */
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-.language-dropdown.show {
-  display: block;
-}
-
-.togglelang{
-  width: 100px; /* Set the width of the image */
-  height: 40px; /* Set the height of the image */
-  top: 1px; /* Adjust the vertical position */
-  margin-left: 10px;
-  border: none !important; /* Remove border */
-  outline: none; /* Remove outline */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  left: calc(50% - 25px); /* Align the button to the center horizontally */
-  transform: translateY(-35.5%);
-  cursor: pointer; /* Change cursor to pointer on hover */
-  background-color: transparent;
-}
-
-.togglelang .triangle {
-  background-color: transparent;
-  width: 16px;
-  border:0;
-  position: absolute;
-  left:100px; /* Adjust the positioning as needed */
-  top: 12px; /* Adjust the positioning as needed */
-}
-
-.togglelang:hover .triangle {
-  transform: rotate(-90deg); /* Rotate the triangle 180 degrees on hover */
-}
-
-
-.togglelang:hover
-{
-  cursor: pointer;
-}
-
-#searchbar {
-  left:450px;
-  transform: translateY(-95%);
-  padding: 3px; /* Adjust padding as needed */
-  border: 1px solid #ccc; /* Add a border to the search bar */
-  border-radius: 8px; /* Add rounded corners */
-  font-size: 15px; /* Adjust font size as needed */
-  width: 100px; /* Adjust width as needed */
-  height:25px;
-  margin-left: 22px;
-  margin-top:1px;
-}
-
-.rectangle-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Center content horizontally */
-  height: 60vh; /* Adjust the height as needed */
-  margin-left: 50px; /* Adjust the value as needed */
-}
-
-.rectangle-title {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit the color from the parent element */
-  margin:0;
-  padding:0; /* Remove unnecessary margin */
-}
-
-h2 {
-  margin:0;
-}
-
-.rectangle {
-  width: 160px; /* Adjust width as needed */
-  height: 90px; /* Adjust height as needed */
-  background-color: #ccc; /* Gray background */
-  size:14px;
-  border-radius: 10px;
-  margin-bottom:5px;
+#searchbar{
+    height: 25px;
+    padding-right: 10px;
+    border-radius: 10px;
 }
