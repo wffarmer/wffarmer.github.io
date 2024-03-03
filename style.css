@@ -14,7 +14,7 @@
 .hamburgermenu{
     background-color: transparent;
     flex-grow: 0;
-    width: 85px;
+    width: 60px;
     display: flex;
     cursor: pointer;
     align-self: flex-start;
@@ -23,8 +23,8 @@
 
 #burgerbars{
     padding: 10px;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -67,12 +67,13 @@ button{
     position: absolute;
     top:0;
     left: 0;
-    width: 25px;
+    width: 30px;
     height: 100%;
     border: none;
     cursor: pointer;
     background: none;
     border-radius: 50%;
+    padding-left: 5px;
 }
 
 button i{
@@ -84,10 +85,9 @@ input{
     height: 100%;
     display: block;
     border-radius: 25px;
-    padding: 4px 20px 4px 10px;
-    padding-left: 30px;
+    padding: 7px 20px 7px 10px;
+    padding-left: 35px;
     border: none;
-    
 }
 
 input:focus::placeholder {
