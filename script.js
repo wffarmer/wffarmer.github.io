@@ -6,6 +6,18 @@ hamburger.addEventListener("click", () => {
     leftmenu.classList.toggle("active");
 })
 
+document.addEventListener("click", (event) => {
+    const leftMenu = document.querySelector(".leftmenu");
+    const hamburger = document.getElementById("burgerbars"); // Get the hamburger menu element
+  
+    // Check if the clicked element is part of the left menu or the hamburger menu
+    const isLeftMenuClick = leftMenu.contains(event.target) || event.target === hamburger;
+  
+    if (leftMenu.classList.contains("active") && !isLeftMenuClick) {
+      leftMenu.classList.remove("active");
+    }
+  });
+
 const theme = document.querySelector(".theme");
 const themeSelect = document.querySelector("select[name='theme']");
 
