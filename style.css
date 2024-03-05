@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --darkbg: rgb(23, 30, 33);
+    --lightbg: #fff;
+    --darkbgtext: #ff8424;
+    --lightbgtext: #000;
+}
+
+.hamburgermenu{
+    background-color: transparent;
+    flex-grow: 0;
+    width: 60px;
+    display: flex;
+    cursor: pointer;
+    align-self: flex-start;
+    box-sizing: inherit;
+    
+}
+
+#burgerbars{
+    z-index: 99;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#logo img{
+    height: 60px;
+    width: auto;
+}
+
+body{
+font-family: "Arial";
+min-height: 100vh;
+font-size: 14px;
+font-weight: 400;
+margin: 0;
+color: var(--darkbgtext);
+}
+
+.theme{
+    background-color: var(--darkbg);
+    display: block;
+    min-height: 100vh;
+
+}
+
+.topmenu{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    box-sizing: inherit;
+    justify-content: space-between;
+}
+
+.searchbox{
+    height: 60px;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+button{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+
+button i{
+    color: rgb(93, 94, 95);
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 25px;
+    padding: 7px 20px 7px 10px;
+    padding-left: 35px;
+    border: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+form{
+    background: grey;
+    border-radius: 25px;
+    position: relative;
+}
+
+
+.leftmenu{
+    display: none;
+    /*background-clip: content-box;*/
+    background-color: #000;
+    padding-left: 25px;
+    padding-top: 50px;
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    overflow: auto;
+}
+
+select{
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.5em;
+    color: gray;
+    margin-bottom: 100px;
+}
+
+h2, h3, h4{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+select option{
+    color: gray;
+}
+
+.leftmenu.active{
+display: block;
+}
+
+
