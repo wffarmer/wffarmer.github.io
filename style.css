@@ -19,9 +19,11 @@
     cursor: pointer;
     align-self: flex-start;
     box-sizing: inherit;
+    
 }
 
 #burgerbars{
+    z-index: 99;
     padding: 10px;
     width: 50px;
     height: 50px;
@@ -34,9 +36,12 @@
 }
 
 body{
+font-family: "Arial";
 min-height: 100vh;
 font-size: 14px;
+font-weight: 400;
 margin: 0;
+color: var(--darkbgtext);
 }
 
 .theme{
@@ -99,4 +104,39 @@ form{
     border-radius: 25px;
     position: relative;
 }
+
+
+.leftmenu{
+    display: none;
+    /*background-clip: content-box;*/
+    background-color: #000;
+    padding-left: 25px;
+    padding-top: 50px;
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    overflow: auto;
+}
+
+select{
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.5em;
+    color: gray;
+    margin-bottom: 100px;
+}
+
+h2, h3, h4{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+select option{
+    color: gray;
+}
+
+.leftmenu.active{
+display: block;
+}
+
 
