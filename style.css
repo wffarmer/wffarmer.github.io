@@ -83,6 +83,15 @@ color: var(--orangetextcolor);
     height: 60px;
     box-sizing: inherit;
     justify-content: space-between;
+    background-color: var(--darkbg);
+}
+
+.darktheme.topmenu{
+    background-color: var(--darkbg);
+}
+
+.lighttheme.topmenu{
+    background-color: var(--lightbg); 
 }
 
 .searchbox{
