@@ -127,7 +127,7 @@ input:focus::placeholder {
 
 form{
     background: grey;
-    border-radius: 0px;
+    border-radius: 25px;
     position: relative;
 }
 
@@ -146,6 +146,7 @@ form{
 
 select{
     text-align: center;
+    border-radius: 0;
     cursor: pointer;
     width: 100%;
     font-size: 1.4em;
@@ -154,10 +155,10 @@ select{
     background-color: #000;
     border: white solid 1.3px;
     padding: 5px;
+}
 
+select option{
     border-radius: 0;
-    background-clip: content-box;
-    box-shadow: 0 0 0 5px inset #000;
 }
 
 
@@ -234,5 +235,10 @@ color: #9bcdfd;
     margin-bottom: 150px;
 }
 
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+}
 
