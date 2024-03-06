@@ -154,6 +154,9 @@ select{
     background-color: #000;
     border: white solid 1.3px;
     padding: 5px;
+
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px inset #000;
 }
 
 
