@@ -22,6 +22,7 @@ document.addEventListener("click", (event) => {
   });
 
 const theme = document.querySelector(".theme");
+const topmenu = document.querySelector(".topmenu");
 const themeSelect = document.querySelector("select[name='theme']");
 const colorSelect = document.querySelector("select[name='color']");
 
@@ -45,13 +46,17 @@ themeSelect.addEventListener("change", function() {
         burgerImg.src = `images/${logoSuffix}burger.png`; 
         logoImg.src = `images/${logoSuffix}logo.png`;
         theme.classList.add("darktheme");
-        theme.classList.remove("lighttheme"); 
+        topmenu.classList.add("darktheme");
+        theme.classList.remove("lighttheme");
+        topmenu.classList.remove("lighttheme"); 
         document.querySelector(".leftmenu.active").style.backgroundColor = "var(--darkbgmenu)";
     } else if (selectedTheme === "lighttheme") {
         burgerImg.src = "images/lightburger.png";
         logoImg.src = "images/lightlogo.png";
         theme.classList.add("lighttheme"); 
+        topmenu.classList.add("lighttheme");
         theme.classList.remove("darktheme"); 
+        topmenu.classList.remove("darktheme");
         document.querySelector(".leftmenu.active").style.backgroundColor = "var(--lightbgmenu)";
     }
   });
