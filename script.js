@@ -32,8 +32,6 @@ function applyThemeAndColor() {
   // Apply theme and color classes
   theme.classList.add(selectedTheme);
   theme.classList.add(selectedColor);
-  leftmenu.style.backgroundColor = window.getComputedStyle(leftmenu).backgroundColor;
-
 }
 
 themeSelect.addEventListener("change", function() {
