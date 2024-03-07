@@ -187,7 +187,6 @@ h2, h3, h4{
 .leftmenu.active{
     display: block;
     z-index: 98;
-    opacity: 1;
 }
 
 #orange{
