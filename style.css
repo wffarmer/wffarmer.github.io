@@ -147,6 +147,7 @@ background-color: var(--darkbg);
     font-weight: 500;
     background-clip: content-box;
     background-color: tomato;
+    border: none;
 }
 
 .ok:hover{
