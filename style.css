@@ -247,6 +247,7 @@ select{
 
 select option{
     border-radius: 0;
+    height: 25px;
 }
 
 
