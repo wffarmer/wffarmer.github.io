@@ -291,7 +291,7 @@ okButton.addEventListener("click", function() {
 document.addEventListener("DOMContentLoaded", function() {
   // Adjust padding-top of the menu based on disclaimer visibility
   if (disclaimer.style.display === "flex") {
-    leftmenu.style.paddingTop = "110px"; // Adjust this value as needed
+    leftmenu.style.paddingTop = `${disclaimer.clientHeight + 60}px`; // Adjust this value as needed
   } else {
     leftmenu.style.paddingTop = "60px"; // Default padding-top value
   }
