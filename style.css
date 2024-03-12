@@ -117,10 +117,10 @@ background-color: var(--darkbg);
 }
 
 .disclaimer{
-    color: yellow;
+    color: aqua;
     z-index: 0;
     justify-content: center;
-    background-color: aqua;
+    background-color: yellow;
     align-items: center;
     min-width: 100%;
     min-height: 50px;
