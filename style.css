@@ -80,13 +80,11 @@ margin: 0;
 
 .darktheme{
 background-color: var(--darkbg);
-min-height: 100vh;
 }
 
 .lighttheme{
     background-color: var(--lightbg);
     color: var(--lightbgtext);
-    min-height: 100vh;
 }
 
 .topmenu{
