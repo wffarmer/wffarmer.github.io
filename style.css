@@ -50,6 +50,11 @@
     cursor: pointer;
 }
 
+#logo{
+    height: 60px;
+    width: 200px;
+}
+
 #logo img{
     height: 60px;
     width: auto;
