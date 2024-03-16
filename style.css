@@ -398,7 +398,7 @@ button:focus,
     line-height: 35px;
     text-align: center;
     color: mediumpurple;
-    background-color: rgba(162, 181, 199, 0.85); 
+    background-color: rgba(162, 181, 199, 0.6); 
     position: absolute;
     bottom: 0;
     left: 0;
