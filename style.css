@@ -14,11 +14,12 @@
     --redtextcolor: tomato;
     --whitetextcolor: #fff;
     --bluetextcolor: #9bcdfd;
-
+    --darklinkcolor: #5ff5ff;
+    --lightlinkcolor: #e90606;
 }
 
 a{
-    color: #9bcdfd;
+    text-decoration: none;
 }
 
 .footer{
@@ -65,7 +66,7 @@ a{
 }
 
 body{
-    display: block;
+display: block;
 font-family: "Arial";
 min-height: 100vh;
 font-size: 14px;
@@ -86,13 +87,17 @@ margin: 0;
 background-color: var(--darkbg);
 }
 
+.darktheme a{
+    color: var(--darklinkcolor);
+}
+
 .lighttheme{
     background-color: var(--lightbg);
     color: var(--lightbgtext);
 }
 
 .lighttheme a{
-    color:var(--lightbgtext)
+    color:var(--lightlinkcolor);
 }
 
 .topmenu{
@@ -235,6 +240,7 @@ form{
 }
 
 
+
 .leftmenu{
     display: none;
     padding-left: 10px;
@@ -329,15 +335,7 @@ color: #9bcdfd;
     color: var(--orangetextcolor);
 }
 
-.darktheme.orange a{
-    color: var(--orangetextcolor);
-}
-
 .darktheme.white{
-    color: var(--whitetextcolor);
-}
-
-.darktheme.white a{
     color: var(--whitetextcolor);
 }
 
@@ -345,15 +343,7 @@ color: #9bcdfd;
     color: var(--redtextcolor);
 }
 
-.darktheme.red a{
-    color: var(--redtextcolor);
-}
-
 .darktheme.blue{
-    color: var(--bluetextcolor);
-}
-
-.darktheme.blue a{
     color: var(--bluetextcolor);
 }
 
@@ -460,6 +450,22 @@ button:focus,
     line-height: 1;
 }
 
+.bottomtext{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 50px;
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    align-self: center;
+    font-size: 22px;
+    font-weight: 520;
+    width: calc();
+    
+}
+
 @media all and (max-width: 420px) {
     .content ul {
         display: flex;
@@ -467,5 +473,4 @@ button:focus,
         align-items: center;
     }
   }
-
 
