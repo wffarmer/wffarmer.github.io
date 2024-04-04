@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warframe.school</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+
+<body>
+    <section class="theme">
+        <nav class="topmenu">
+            <div class="hamburgermenu" id="hamburger">
+                <img src="images/burger.png" id="burgerbars" alt="menu">
+            </div>
+                <aside class="leftmenu">
+                    <h2 data-translate="language">
+                        LANGUAGE
+                    </h2>
+                    <select id="togglelang">
+                        <option data-translate="english" value="english">English</option>
+                        <option data-translate="russian" value="russian">Русский</option>
+                    </select>
+                    <h3 data-translate="theme">
+                        THEME
+                    </h3>
+                    <select name="theme" id="toggletheme">
+                        <option value="darktheme" data-translate="dark">Dark</option>
+                        <option value="lighttheme" data-translate="light">Light</option>
+                    </select>
+                    <h4 data-translate="dmtc">
+                        DARK MODE TEXT COLOR
+                    </h4>
+                    <select name="color" id="togglecolor">
+                        <option data-translate="orange" value="orange" id="orange">Orange</option>
+                        <option data-translate="white" value="white" id="white">White</option>
+                        <option data-translate="red" value="red" id="red">Red</option>
+                        <option data-translate="blue" value="blue" id="blue">Blue</option>
+                    </select>
+                </aside>
+            <a id="logo" href="index.html">
+                <img src="images/logo.png" alt="warframe.school">
+            </a>
+            <div class="searchbox">
+                <form>
+                    <input type="text" placeholder="Search..." data-translate="search">
+                    <button type="submit" id="submit">
+                        <i class="fa fa-search" aria-hidden="false"> </i>
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="disclaimer">
+            <span>
+                <b>Warframe.school</b>
+                <span id="dsc" data-translate="disclaimer">is a fan site not associated with</span>
+                <b>Digital Extremes</b>
+            </span>
+            <button class="ok">
+                <div id="ok">
+                    <i class="fa fa-check" aria-hidden="false"> </i>
+                    <span>OK, I got it</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- content here -->
+        <div class="maintext">
+            <p data-translate="resources">
+                here you can learn how to farm resources
+            </p>
+        </div>
+        <div class="content">
+            <iframe id="iframeresources" width="400" height="225" src="https://www.youtube.com/embed/AjWfY7SnMBI?si=KkwxT_TEeManNPnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="pagetext">
+                <p data-translate="pagetextresources">
+                    sample text
+                </p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            
+        </footer>
+
+        <div class="vertical-scrollbar">
+
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const languageSelect = document.getElementById('togglelang');
+            const iframe = document.getElementById('iframeresources');
+
+            function saveSelectedLanguageToLocalStorage(selectedLanguage) {
+            localStorage.setItem("selectedLanguage", selectedLanguage);
+        }
+
+        function loadSelectedLanguageFromLocalStorage() {
+            const storedLanguage = localStorage.getItem("selectedLanguage");
+            if (storedLanguage) {
+                languageSelect.value = storedLanguage;
+                // Set iframe source based on the stored language
+                if (storedLanguage === 'russian') {
+                    iframe.src = "https://www.youtube.com/embed/y-cJuCMzpdA?si=ic0r5Ktq-uQo8b12";
+                } else {
+                    iframe.src = "https://www.youtube.com/embed/AjWfY7SnMBI?si=KkwxT_TEeManNPnc";
+                }
+            }
+        }
+
+        // Load selected language from localStorage on page load
+        loadSelectedLanguageFromLocalStorage();
+
+            languageSelect.addEventListener('change', function() {
+                const selectedLanguage = this.value;
+                if (selectedLanguage === 'russian') {
+                    iframe.src = "https://www.youtube.com/embed/y-cJuCMzpdA?si=ic0r5Ktq-uQo8b12";
+                } else {
+                    iframe.src = "https://www.youtube.com/embed/AjWfY7SnMBI?si=KkwxT_TEeManNPnc";
+                }
+            });
+        });
+    </script>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
+
+
