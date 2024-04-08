@@ -490,18 +490,17 @@ ul {
     width: 100%;
     padding-top: 5px;
     justify-content: space-evenly;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 #utd1{
-    width: 35%;
+    width: 30%;
 }
 
 #utd2{
-    width: 40%;
+    width: 35%;
 }
 
 #utd3{
-    width: 25%;
+    width: 30%;
 }
-

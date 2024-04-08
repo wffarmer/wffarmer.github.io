@@ -19,7 +19,17 @@
   "toptext": "Узнай больше про следующие темы", 
   "oktext": "Окей, я понял",
   "power": "как стать сильнее",
-  "progress": "как добиться прогресса",
+  "progress": "Прогресс в Warframe",
   "resources": "как фармить ресурсы",
-  "pagetextpower": "СКОРО БУДЕТ..."
+  "pagetextpower": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><br><br><br><br>",
+  "giveawaylink" : "Еженедельный Розыгрыш",
+  "aboutlink": "О ",
+  "wfs": "<a href=\"index.html\">Warframe.school</a> это блог который заходит глубоко в некоторые темы Warframe.",
+  "pagetextresources": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><br><br><br><br>",
+  "toptextabout": "О Warframe.school",
+  "bottomtextabout": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><br><br><br><br>",
+  "bottomtextprogress": "СКОРО БУДЕТ",
+  "supportme": "Поддержи меня",
+  "toptextgiveaway": "Еженедельный Розыгрыш"
+
 }
