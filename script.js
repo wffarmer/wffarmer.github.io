@@ -117,16 +117,20 @@ hamburger.addEventListener("click", () => {
     if (leftmenu.classList.contains("active")) {
       disclaimer.style.left = "175px";
       disclaimer.style.width = `calc(100% - 175px)`;
-      maintext.style.paddingTop = (20 + disclaimer.clientHeight) + 'px';
+      disclaimerHeight = disclaimer.clientHeight;
+      maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+      p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   } else {
       disclaimer.style.left = "0";
       disclaimer.style.width = "100%";
-      disclaimerHeight = disclaimer.clientHeight;
+      
       if (!disclaimer.style.display === "flex")
       {
         disclaimerHeight = 0;
       }
-      maintext.style.paddingTop = (20 + disclaimer.clientHeight) + 'px';
+      disclaimerHeight = disclaimer.clientHeight;
+      maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+      p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   }
   disclaimerHeight = disclaimer.clientHeight;
   if (!disclaimer.style.display === "flex")
@@ -147,7 +151,9 @@ document.addEventListener("click", (event) => {
       if (!disclaimerHidden){
         disclaimer.style.left = "0";
         disclaimer.style.width = "100%";
-        maintext.style.paddingTop = (20 + disclaimer.clientHeight) + 'px';
+        disclaimerHeight = disclaimer.clientHeight;
+        maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+        p.style.paddingTop = (40 + disclaimerHeight) + 'px';
       }
     }
   });
