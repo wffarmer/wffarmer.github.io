@@ -13,6 +13,7 @@ const storedLanguage = localStorage.getItem("selectedLanguage");
 const storedTheme = localStorage.getItem("selectedTheme");
 const storedColor = localStorage.getItem("selectedColor");  
 const iframe = document.querySelector(".content iframe");
+const maintext = document.querySelector(".maintext");
 
 function replaceNewlinesWithBreaks(text) {
   return text.replace(/\\n/g, '<br>');
@@ -116,6 +117,7 @@ hamburger.addEventListener("click", () => {
     if (leftmenu.classList.contains("active")) {
       disclaimer.style.left = "175px";
       disclaimer.style.width = `calc(100% - 175px)`;
+      content.style.paddingTop = (20 + disclaimer.clientHeight) + 'px';
   } else {
       disclaimer.style.left = "0";
       disclaimer.style.width = "100%";
