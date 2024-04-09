@@ -120,7 +120,7 @@ hamburger.addEventListener("click", () => {
       disclaimer.style.left = "175px";
       disclaimer.style.width = `calc(100% - 175px)`;
       disclaimerHeight = disclaimer.clientHeight;
-      maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+      maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
       p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   } else {
       disclaimer.style.left = "0";
@@ -131,7 +131,7 @@ hamburger.addEventListener("click", () => {
         disclaimerHeight = "0px";;
       }
       disclaimerHeight = disclaimer.clientHeight;
-      maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+      maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
       p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   }
   disclaimerHeight = disclaimer.clientHeight;
@@ -154,7 +154,7 @@ document.addEventListener("click", (event) => {
         disclaimer.style.left = "0";
         disclaimer.style.width = "100%";
         disclaimerHeight = disclaimer.clientHeight;
-        maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+        maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
         p.style.paddingTop = (40 + disclaimerHeight) + 'px';
       }
     }
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   else{
     disclaimerHeight = disclaimer.clientHeight;
-    maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+    maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
     p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   }
   const storedTheme = localStorage.getItem("selectedTheme");

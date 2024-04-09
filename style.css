@@ -451,6 +451,7 @@ ul {
 }
 
 .maintext{
+    padding-top: 1px;
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 40px;
@@ -458,6 +459,10 @@ ul {
     text-align: center;
     font-size: 40px;
     line-height: 1;
+}
+
+p{
+    padding-top: 1px;
 }
 
 .bottomtext{
