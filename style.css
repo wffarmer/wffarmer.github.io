@@ -161,7 +161,7 @@ background-color: var(--darkbg);
     padding: 5px;
     top: 60px;
     position: absolute;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     text-align: center;
     line-height: 1.5;

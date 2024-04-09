@@ -15,6 +15,8 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 
+var disclaimerHidden = localStorage.getItem("disclaimerHidden");
+
 function replaceNewlinesWithBreaks(text) {
   return text.replace(/\\n/g, '<br>');
 }
@@ -22,7 +24,7 @@ function replaceNewlinesWithBreaks(text) {
 var disclaimerHeight = disclaimer.clientHeight;
 if (!disclaimer.style.display === "flex")
 {
-  disclaimerHeight = 0;
+  disclaimerHeight = "0px";;
 }
 
 if (!theme.classList.contains("darktheme")) {
@@ -126,7 +128,7 @@ hamburger.addEventListener("click", () => {
       
       if (!disclaimer.style.display === "flex")
       {
-        disclaimerHeight = 0;
+        disclaimerHeight = "0px";;
       }
       disclaimerHeight = disclaimer.clientHeight;
       maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
@@ -135,7 +137,7 @@ hamburger.addEventListener("click", () => {
   disclaimerHeight = disclaimer.clientHeight;
   if (!disclaimer.style.display === "flex")
   {
-    disclaimerHeight = 0;
+    disclaimerHeight = "0px";;
   }
   //content.style.paddingTop = (30 + disclaimerHeight) + 'px';
   p.style.paddingTop = (40 + disclaimerHeight) + 'px';
@@ -147,7 +149,7 @@ document.addEventListener("click", (event) => {
 
     if (leftmenu.classList.contains("active") && !isLeftMenuClick && !isDisclaimerButtonClick) {
       leftmenu.classList.remove("active");
-      const disclaimerHidden = localStorage.getItem("disclaimerHidden");
+      disclaimerHidden = localStorage.getItem("disclaimerHidden");
       if (!disclaimerHidden){
         disclaimer.style.left = "0";
         disclaimer.style.width = "100%";
@@ -267,12 +269,18 @@ function translatePage(translations) {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  disclaimerHeight = disclaimer.clientHeight;
+  if (!disclaimerHidden) {
+    disclaimer.style.display = "flex"; // Show the disclaimer if it hasn't been clicked before
+} else {
+    disclaimer.style.display = "none"; // Hide the disclaimer if it has been clicked before
+}
+
   if (!disclaimer.style.display === "flex")
   {
-    disclaimerHeight = 0;
+    disclaimerHeight = "0px";;
   }
   else{
+    disclaimerHeight = disclaimer.clientHeight;
     maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
     p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   }
@@ -334,20 +342,10 @@ function updateLanguageText(data) {
   // Add more similar lines for other elements as needed
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  const disclaimerHidden = localStorage.getItem("disclaimerHidden");
-
-  if (!disclaimerHidden) {
-      disclaimer.style.display = "flex"; // Show the disclaimer if it hasn't been clicked before
-  } else {
-      disclaimer.style.display = "none"; // Hide the disclaimer if it has been clicked before
-  }
-});
-
 okButton.addEventListener("click", function() {
   disclaimer.style.display = "none";
   localStorage.setItem("disclaimerHidden", "true");
+  disclaimerHeight = "0px";
   //content.style.paddingTop = "30px";
   p.style.paddingTop = "40px";
 });
@@ -368,7 +366,7 @@ window.addEventListener('resize', function() {
   disclaimerHeight = disclaimer.clientHeight;
   if (!disclaimer.style.display === "flex")
   {
-    disclaimerHeight = 0;
+    disclaimerHeight = "0px";;
   }
       
   //content.style.paddingTop = (30 + disclaimerHeight) + 'px';
