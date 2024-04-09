@@ -272,7 +272,10 @@ document.addEventListener("DOMContentLoaded", function() {
   {
     disclaimerHeight = 0;
   }
-
+  else{
+    maintext.style.paddingTop = (20 + disclaimerHeight) + 'px';
+    p.style.paddingTop = (40 + disclaimerHeight) + 'px';
+  }
   const storedTheme = localStorage.getItem("selectedTheme");
   if (storedTheme) {
     themeSelect.value = storedTheme;
@@ -354,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Adjust padding-top of the menu based on disclaimer visibility
   if (disclaimer.style.display === "flex") {
     //content.style.paddingTop = `${disclaimer.clientHeight + 30}px`;
-    p.style.paddingTop = `${disclaimer.clientHeight + 40}px`;
+    p.style.paddingTop = (40 + disclaimerHeight) + 'px'
   } else {
     //content.style.paddingTop = "30px"; // Default padding-top value
     p.style.paddingTop = "40px";
