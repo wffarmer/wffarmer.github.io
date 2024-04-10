@@ -451,7 +451,8 @@ ul {
 }
 
 .maintext{
-    padding-top: 1px;
+    display: block;
+    padding-top: 30px;
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 40px;
@@ -459,10 +460,6 @@ ul {
     text-align: center;
     font-size: 40px;
     line-height: 1;
-}
-
-p{
-    padding-top: 1px;
 }
 
 .bottomtext{
@@ -509,3 +506,4 @@ p{
 #utd3{
     width: 30%;
 }
+

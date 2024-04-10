@@ -31,16 +31,6 @@ if (!theme.classList.contains("darktheme")) {
   leftmenu.classList.add("darktheme");
 }
 
-function updateIframeSource(language) {
-  if (language === 'russian') {
-    // Set the iframe source for Russian language
-    iframe.src = "https://www.youtube.com/embed/YourRussianVideoID";
-  } else {
-    // Set the iframe source for English language (or any other language)
-    iframe.src = "https://www.youtube.com/embed/YourEnglishVideoID";
-  }
-}
-
 function saveSettingsToLocalStorage() {
   localStorage.setItem("selectedLanguage", languageSelect.value);
   localStorage.setItem("selectedTheme", themeSelect.value);
@@ -50,10 +40,8 @@ function saveSettingsToLocalStorage() {
 function applyLanguage() {
   const selectedLanguage = languageSelect.value;
 
-  // Save selected language to local storage
   localStorage.setItem("selectedLanguage", selectedLanguage);
 
-  // Load translations for the selected language
   loadLanguage(selectedLanguage);
 }
 
@@ -61,10 +49,8 @@ function applyThemeAndColor() {
   const selectedTheme = themeSelect.value;
   const selectedColor = colorSelect.value;
 
-  // Reset theme and color classes
   theme.className = "theme";
 
-  // Apply theme and color classes
   theme.classList.add(selectedTheme);
   theme.classList.add(selectedColor);
 }
@@ -82,10 +68,8 @@ colorSelect.addEventListener("change", function() {
 function applyLanguageAndTranslation() {
   const selectedLanguage = languageSelect.value;
 
-  // Save selected language to local storage
   localStorage.setItem("selectedLanguage", selectedLanguage);
 
-  // Fetch and apply translations for the selected language
   loadTranslations(selectedLanguage);
 }
 
@@ -139,7 +123,6 @@ hamburger.addEventListener("click", () => {
   {
     disclaimerHeight = "0px";;
   }
-  //content.style.paddingTop = (30 + disclaimerHeight) + 'px';
   p.style.paddingTop = (40 + disclaimerHeight) + 'px';
 })
 
@@ -167,7 +150,7 @@ themeSelect.addEventListener("change", function() {
   
     const burgerImg = document.getElementById("burgerbars");
     const logoImg = document.getElementById("logo").querySelector("img");
-    const logoSuffix = color === "orange" ? "" : `${color.toLowerCase()}`; // Append color to logo filename if not orange
+    const logoSuffix = color === "orange" ? "" : `${color.toLowerCase()}`;
 
 
     if (selectedTheme === "darktheme") {
@@ -203,10 +186,9 @@ themeSelect.addEventListener("change", function() {
     const burgerImg = document.getElementById("burgerbars");
     const logoImg = document.getElementById("logo").querySelector("img");
 
-    // Remove all other color classes before applying the selected one
-    darktheme.classList.remove("white", "red", "blue", "orange"); // Optimized
+    darktheme.classList.remove("white", "red", "blue", "orange"); 
   
-    if (selectedColor) { // Check if a color is selected (handles potential null value)
+    if (selectedColor) { 
       darktheme.classList.add(selectedColor);
     }
     
@@ -247,7 +229,6 @@ function loadTranslations(language) {
       }
   };
 
-  // Replace 'translations_en.json' and 'translations_ru.json' with your actual file names
   xhr.open('GET', `/jsons/${language}.json`, true);
   xhr.send();
 }
@@ -270,9 +251,9 @@ function translatePage(translations) {
 document.addEventListener("DOMContentLoaded", function() {
 
   if (!disclaimerHidden) {
-    disclaimer.style.display = "flex"; // Show the disclaimer if it hasn't been clicked before
+    disclaimer.style.display = "flex";
 } else {
-    disclaimer.style.display = "none"; // Hide the disclaimer if it has been clicked before
+    disclaimer.style.display = "none"; 
 }
 
   if (!disclaimer.style.display === "flex")
@@ -287,26 +268,21 @@ document.addEventListener("DOMContentLoaded", function() {
   const storedTheme = localStorage.getItem("selectedTheme");
   if (storedTheme) {
     themeSelect.value = storedTheme;
-    // Apply the theme based on the retrieved value
-    themeSelect.dispatchEvent(new Event("change")); // Trigger the change event to apply styling
+    themeSelect.dispatchEvent(new Event("change")); 
   }
 
-  // Similar logic for loading selected color and language from Local Storage
   const storedColor = localStorage.getItem("selectedColor");
   if (storedColor) {
     colorSelect.value = storedColor;
-    // Apply the color based on the retrieved value
     colorSelect.dispatchEvent(new Event("change"));
   }
 
   const storedLanguage = localStorage.getItem("selectedLanguage");
   if (storedLanguage) {
     languageSelect.value = storedLanguage;
-    // Load translations based on the retrieved language
     loadLanguage(storedLanguage);
   }
 
-  //loadLanguage(languageSelect.value); 
 
   languageSelect.addEventListener("change", function() {
     applyLanguage();
@@ -316,7 +292,6 @@ document.addEventListener("DOMContentLoaded", function() {
 loadLanguage(languageSelect.value);
 
 function loadLanguage(language) {
-  // Fetch the JSON file corresponding to the selected language
   const filename = language === 'russian' ? 'jsons/russian.json' : 'jsons/english.json';
   fetch(filename)
       .then(response => {
@@ -326,7 +301,6 @@ function loadLanguage(language) {
           return response.json();
       })
       .then(data => {
-          // Update all text content with the language data
           updateLanguageText(data);
       })
       .catch(error => {
@@ -335,29 +309,21 @@ function loadLanguage(language) {
 }
 
 function updateLanguageText(data) {
-  // Update text content for all elements with the corresponding data from the JSON
-  // For example:
-  //document.getElementById('pg').textContent = data.paragraph;
-  //document.getElementById('pg').textContent = data.paragraph;
-  // Add more similar lines for other elements as needed
 }
 
 okButton.addEventListener("click", function() {
   disclaimer.style.display = "none";
   localStorage.setItem("disclaimerHidden", "true");
   disclaimerHeight = "0px";
-  //content.style.paddingTop = "30px";
   p.style.paddingTop = "40px";
 });
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Adjust padding-top of the menu based on disclaimer visibility
+  
   if (disclaimer.style.display === "flex") {
-    //content.style.paddingTop = `${disclaimer.clientHeight + 30}px`;
     p.style.paddingTop = (40 + disclaimerHeight) + 'px'
   } else {
-    //content.style.paddingTop = "30px"; // Default padding-top value
     p.style.paddingTop = "40px";
   }
 });
@@ -369,7 +335,6 @@ window.addEventListener('resize', function() {
     disclaimerHeight = "0px";;
   }
       
-  //content.style.paddingTop = (30 + disclaimerHeight) + 'px';
   p.style.paddingTop = (40 + disclaimerHeight) + 'px';
 });
 
