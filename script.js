@@ -107,7 +107,7 @@ hamburger.addEventListener("click", () => {
     }
     setTimeout(function() {
       maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
-  }, 100);
+  }, 25);
 })
 
 document.addEventListener("click", (event) => {
@@ -127,7 +127,7 @@ document.addEventListener("click", (event) => {
     }
     setTimeout(function() {
       maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
-  }, 100);
+  }, 25);
     }
   });
 
@@ -289,7 +289,7 @@ okButton.addEventListener("click", function() {
   localStorage.setItem("disclaimerHidden", "true");
   setTimeout(function() {
     maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
-}, 100);
+}, 25);
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -311,7 +311,7 @@ window.addEventListener('DOMContentLoaded', function() {
       updateInputWidth();
       setTimeout(function() {
         maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
-    }, 100);
+    }, 25);
   });
 
   window.onload = function() {
@@ -321,6 +321,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     setTimeout(function() {
       maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
-  }, 100);
+  }, 25);
 };
 });
