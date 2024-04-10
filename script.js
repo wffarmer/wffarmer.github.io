@@ -15,16 +15,10 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 
-var disclaimerHidden = localStorage.getItem("disclaimerHidden");
+disclaimerHidden = localStorage.getItem("disclaimerHidden");
 
 function replaceNewlinesWithBreaks(text) {
   return text.replace(/\\n/g, '<br>');
-}
-
-var disclaimerHeight = disclaimer.clientHeight;
-if (!disclaimer.style.display === "flex")
-{
-  disclaimerHeight = "0px";;
 }
 
 if (!theme.classList.contains("darktheme")) {
@@ -103,27 +97,17 @@ hamburger.addEventListener("click", () => {
     if (leftmenu.classList.contains("active")) {
       disclaimer.style.left = "175px";
       disclaimer.style.width = `calc(100% - 175px)`;
-      disclaimerHeight = disclaimer.clientHeight;
-      maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
-      p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   } else {
       disclaimer.style.left = "0";
       disclaimer.style.width = "100%";
-      
-      if (!disclaimer.style.display === "flex")
-      {
-        disclaimerHeight = "0px";;
-      }
-      disclaimerHeight = disclaimer.clientHeight;
-      maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
-      p.style.paddingTop = (40 + disclaimerHeight) + 'px';
   }
-  disclaimerHeight = disclaimer.clientHeight;
-  if (!disclaimer.style.display === "flex")
-  {
-    disclaimerHeight = "0px";;
-  }
-  p.style.paddingTop = (40 + disclaimerHeight) + 'px';
+  if(disclaimerHidden)
+    {
+      disclaimer.style.display = "none";
+    }
+    setTimeout(function() {
+      maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
+  }, 10);
 })
 
 document.addEventListener("click", (event) => {
@@ -136,10 +120,14 @@ document.addEventListener("click", (event) => {
       if (!disclaimerHidden){
         disclaimer.style.left = "0";
         disclaimer.style.width = "100%";
-        disclaimerHeight = disclaimer.clientHeight;
-        maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
-        p.style.paddingTop = (40 + disclaimerHeight) + 'px';
       }
+      if(disclaimerHidden)
+    {
+      disclaimer.style.display = "none";
+    }
+    setTimeout(function() {
+      maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
+  }, 10);
     }
   });
 
@@ -250,21 +238,6 @@ function translatePage(translations) {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  if (!disclaimerHidden) {
-    disclaimer.style.display = "flex";
-} else {
-    disclaimer.style.display = "none"; 
-}
-
-  if (!disclaimer.style.display === "flex")
-  {
-    disclaimerHeight = "0px";;
-  }
-  else{
-    disclaimerHeight = disclaimer.clientHeight;
-    maintext.style.paddingTop = (30 + disclaimerHeight) + 'px';
-    p.style.paddingTop = (40 + disclaimerHeight) + 'px';
-  }
   const storedTheme = localStorage.getItem("selectedTheme");
   if (storedTheme) {
     themeSelect.value = storedTheme;
@@ -314,28 +287,9 @@ function updateLanguageText(data) {
 okButton.addEventListener("click", function() {
   disclaimer.style.display = "none";
   localStorage.setItem("disclaimerHidden", "true");
-  disclaimerHeight = "0px";
-  p.style.paddingTop = "40px";
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  
-  if (disclaimer.style.display === "flex") {
-    p.style.paddingTop = (40 + disclaimerHeight) + 'px'
-  } else {
-    p.style.paddingTop = "40px";
-  }
-});
-
-window.addEventListener('resize', function() {
-  disclaimerHeight = disclaimer.clientHeight;
-  if (!disclaimer.style.display === "flex")
-  {
-    disclaimerHeight = "0px";;
-  }
-      
-  p.style.paddingTop = (40 + disclaimerHeight) + 'px';
+  setTimeout(function() {
+    maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
+}, 10);
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -355,7 +309,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('resize', function() {
       updateInputWidth();
+      setTimeout(function() {
+        maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
+    }, 10);
   });
+
+  window.onload = function() {
+    if(disclaimerHidden)
+    {
+      disclaimer.style.display = "none";
+    }
+    setTimeout(function() {
+      maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
+  }, 10);
+};
 });
-
-
