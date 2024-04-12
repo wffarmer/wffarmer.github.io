@@ -15,7 +15,6 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
-const pp = document.getElementById('pp');
 
 disclaimerHidden = localStorage.getItem("disclaimerHidden");
 
@@ -26,7 +25,6 @@ function replaceNewlinesWithBreaks(text) {
 if (!theme.classList.contains("darktheme")) {
   leftmenu.classList.add("darktheme");
   footer.classList.add("darktheme");
-  pp.classList.add("darktheme");
 }
 
 function saveSettingsToLocalStorage() {
@@ -152,12 +150,10 @@ themeSelect.addEventListener("change", function() {
         topmenu.classList.add("darktheme");
         leftmenu.classList.add("darktheme");
         footer.classList.add("darktheme");
-        pp.classList.add("darktheme");
         theme.classList.remove("lighttheme");
         topmenu.classList.remove("lighttheme");
         leftmenu.classList.remove("lighttheme");
         footer.classList.remove("lighttheme");
-        pp.classList.remove("lighttheme");
         localStorage.setItem("selectedTheme", this.value);
       } else if (selectedTheme === "lighttheme") {
         burgerImg.src = "images/lightburger.png";
@@ -166,12 +162,10 @@ themeSelect.addEventListener("change", function() {
         topmenu.classList.add("lighttheme");
         leftmenu.classList.add("lighttheme");
         footer.classList.add("lighttheme");
-        pp.classList.add("lighttheme");
         theme.classList.remove("darktheme"); 
         topmenu.classList.remove("darktheme");
         leftmenu.classList.remove("darktheme");
         footer.classList.remove("darktheme");
-        pp.classList.remove("darktheme");
         localStorage.setItem("selectedTheme", this.value);
         
       }

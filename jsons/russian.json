@@ -22,16 +22,13 @@
   "progress": "Прогресс в Warframe",
   "resources": "как фармить ресурсы",
   "pagetextpower": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><br><br><br><br>",
-  "giveawaylink" : "Розыгрыш",
   "toptextabout":"О Warframe.school",
-  "abouttext": "<a href=\"about.html\">О </a> Warframe.school",
-  "wfs": "<a href=\"index.html\">Warframe.school</a> это блог который заходит глубоко в некоторые темы Warframe.",
   "pagetextresources": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><br><br><br><br>",
   "bottomtextabout": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><!--https://www.youtube.com/channel/UClzztq8qJsvKC0trJdFdItw--><br><br><br><br>",
   "bottomtextprogress": "ПЕРЕВЕДЁННЫЙ ТЕКСТ СКОРО БУДЕТ<br><br><br><br><br><br><br><br>",
-  "supportme": "Поддержи меня",
   "toptextgiveaway": "Еженедельный Розыгрыш",
-  "youtubechannellink": "<a href=\"https://www.youtube.com/channel/UClzztq8qJsvKC0trJdFdItw\">Youtube</a>",
-  "links": "Ссылки<br><br>"
+  "links": "Ссылки<br><br>",
+  "footertext":"<a href=\"about.html\">О сайте</a>&#160;-&#160;<a href=\"https://www.youtube.com/channel/UClzztq8qJsvKC0trJdFdItw\">Youtube Канал</a>&#160;-&#160;<a href=\"giveaway.html\">Розыгрыш</a>",
+  "footerdisclaimertext":"Этот сайт не имеет официальной связи с Digital Extremes или Warframe. Использование этого сайта означает принятие <a href=\"tos.html\">условий использования</a> и <a href=\"privacypolicy.html\">политики конфиденциальности</a> сайта."
 
 }
