@@ -151,10 +151,10 @@ background-color: var(--darkbg);
 }
 
 .disclaimer{
-    color: #265663;
+    color:white;
     z-index: 5;
     justify-content: center;
-    background-color: yellow;
+    background-color: color-mix(in srgb, var(--darklinkcolor) 25%, var(--darkbgmenu) 75%);
     align-items: center;
     width: 100%;
     min-height: 50px;
@@ -531,8 +531,9 @@ hr{
 }
 
 .footerdisclaimer{
-    color: #333d40;
-    background-color: #171e21;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--lightbg);
     line-height: 1.1;
     background-color:var(--darkbgmenu);
     font-size: 14px;
