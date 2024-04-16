@@ -175,7 +175,7 @@ background-color: var(--darkbg);
     color:white;
     z-index: 5;
     justify-content: center;
-    background-color: color-mix(in srgb, var(--darklinkcolor) 25%, var(--darkbgmenu) 75%);
+    background-color: color-mix(in srgb, var(--darklinkcolor) 55%, var(--darkbgmenu) 45%);
     align-items: center;
     width: 100%;
     min-height: 50px;
@@ -527,10 +527,6 @@ hr{
     color:white;
     font-size: 14px;
     text-align: center;
-}
-
-.footerdisclaimer a{
-    color:#78170f;
 }
 
 .footerdisclaimer a:hover{

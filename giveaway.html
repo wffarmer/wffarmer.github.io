@@ -43,8 +43,8 @@
                 <img src="images/logo.png" alt="warframe.school">
             </a>
             <div class="searchbox">
-                <form>
-                    <input type="text" placeholder="Search..." data-translate="search">
+                <form id="searchform">
+                    <input type="text" placeholder="Search..." data-translate="search" id="searcharea">
                     <button type="submit" id="submit">
                         <i class="fa fa-search" aria-hidden="false"> </i>
                     </button>
@@ -86,15 +86,18 @@
         </div>
     
         <footer class="footer">
-            <p data-translate="footertext"></p>
-        </footer>
-        <hr />
-            <div class="footerdisclaimer">
-                <p data-translate="footerdisclaimer">
-
-                </p>
-                <p>This site has no official link with Digital Extremes or Warframe. Use of this site constitutes acceptance of the site's <a href="tos.html">Terms of Service</a> and <a href="privacypolicy.html">Privacy Policy</a>.</p>
+            <div id="links">
+                <p data-translate="footertext"></p>
             </div>
+        
+        <hr />
+        <div id="businessname">
+            <p data-translate="businessname"></p>
+        </div>
+        <div class="footerdisclaimer">
+            <p data-translate="footerdisclaimertext"></p>
+        </div>
+        </footer>
     </section>
     <script src="script.js"></script>
 </body>
