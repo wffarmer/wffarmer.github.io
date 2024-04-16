@@ -81,14 +81,14 @@ a{
 }
 
 #logo{
+    position:relative;
     height: 60px;
     width: 200px;
 }
 
 #logo img{
     height: 60px;
-    width: auto;
-    position:relative;
+    width: 200px;
 }
 
 body{
@@ -115,6 +115,12 @@ background-color: var(--darkbg);
 
 .darktheme a{
     color: var(--darklinkcolor);
+}
+
+.darktheme a:hover{
+    cursor:pointer;
+    transition: ease-in-out 0.3s;
+    color: #11dfff;
 }
 
 .lighttheme{
@@ -507,7 +513,7 @@ ul {
   }
 
 @media all and (min-width: 540px){
-#logo img{
+#logo{
     left:calc(50% - 50px);
 }
 }
@@ -530,7 +536,7 @@ hr{
 }
 
 .footerdisclaimer a:hover{
-    color:red;
+    color:#11dfff;
     transition: ease-in-out 0.3s;
     cursor:pointer;
 }
