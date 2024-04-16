@@ -25,7 +25,8 @@ a{
 .footer{
     z-index: 98;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: sticky;
     left: 0;
     bottom: 0;
@@ -38,7 +39,27 @@ a{
     line-height: 1.8;
 }
 
+#businessname{
+    display:block;
+    position:relative;
+    color:white;
+}
 
+#businessname a{
+    color:white;
+}
+
+#businessname a:hover{
+    cursor: pointer;
+    transition:ease-in-out 300ms;
+    color:#b2b2be
+}
+
+#links{
+    display:block;
+    position:relative;
+    color:white;
+}
 
 .hamburgermenu{
     background-color: transparent;
@@ -491,39 +512,6 @@ ul {
 }
 }
 
-
-.lighttheme.footer p {
-    color: var(--whitetextcolor);
-}
-
-.darktheme.orange.footer p {
-    color: var(--orangetextcolor);
-}
-
-.darktheme.white.footer p {
-    color: var(--whitetextcolor);
-}
-
-.darktheme.red.footer p {
-    color: var(--redtextcolor);
-}
-
-.darktheme.blue.footer p {
-    color: var(--bluetextcolor);
-}
-
-#pp{
-    background-color: var(--darkbgmenu);
-}
-
-.lighttheme#pp a{
-    color:#5ff5ff;
-}
-
-.darktheme#pp a{
-    color:pink;
-}
-
 hr{
     height:1px;
     border: 0.5px solid #ccc;
@@ -533,13 +521,20 @@ hr{
 .footerdisclaimer{
     padding-left: 10px;
     padding-right: 10px;
-    color: var(--lightbg);
+    padding-bottom: 5px;
     line-height: 1.1;
     background-color:var(--darkbgmenu);
+    color:white;
     font-size: 14px;
     text-align: center;
 }
 
 .footerdisclaimer a{
     color:#78170f;
+}
+
+.footerdisclaimer a:hover{
+    color:red;
+    transition: ease-in-out 0.3s;
+    cursor:pointer;
 }
