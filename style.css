@@ -229,6 +229,11 @@ button span{
     color: white;
 }
 
+p span{
+    text-align: center;
+    font-size: 1.5em;
+}
+
 .ok span{
     color: white;
     margin-left: 10px;
@@ -475,6 +480,7 @@ ul {
 }
 
 .maintext{
+    font-weight: 700;
     display: block;
     padding-top: 30px;
     margin-left: 80px;
