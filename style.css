@@ -301,7 +301,7 @@ select{
     width: 100%;
     font-size: 1.4em;
     color: white;
-    margin-bottom: 53px;
+    margin-bottom: 70px;
     background-color: #000;
     border: white solid 1.3px;
     padding: 5px;
@@ -312,13 +312,10 @@ select option{
     height: 25px;
 }
 
-
-
 h2, h3, h4{
     text-align: center;
     font-size: 1.3em;
 }
-
 
 .leftmenu.active{
 display: block;
@@ -382,7 +379,7 @@ color: #9bcdfd;
 
 
 #togglecolor{
-    margin-bottom: 106px;
+    margin-bottom: 140px;
 }
 
 input:focus,

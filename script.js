@@ -1,6 +1,5 @@
 const hamburger = document.getElementById("burgerbars");
 const leftmenu = document.querySelector(".leftmenu");
-const languageSelect = document.getElementById('togglelang');
 const theme = document.querySelector(".theme");
 const topmenu = document.querySelector(".topmenu");
 const themeSelect = document.querySelector("select[name='theme']");
@@ -9,7 +8,6 @@ const okButton = document.querySelector(".ok");
 const disclaimer = document.querySelector(".disclaimer");  
 const p = document.querySelector(".maintext");
 const content = document.querySelector(".content");
-const storedLanguage = localStorage.getItem("selectedLanguage");
 const storedTheme = localStorage.getItem("selectedTheme");
 const storedColor = localStorage.getItem("selectedColor");  
 const iframe = document.querySelector(".content iframe");
@@ -28,17 +26,8 @@ if (!theme.classList.contains("darktheme")) {
 }
 
 function saveSettingsToLocalStorage() {
-  localStorage.setItem("selectedLanguage", languageSelect.value);
   localStorage.setItem("selectedTheme", themeSelect.value);
   localStorage.setItem("selectedColor", colorSelect.value);
-}
-
-function applyLanguage() {
-  const selectedLanguage = languageSelect.value;
-
-  localStorage.setItem("selectedLanguage", selectedLanguage);
-
-  loadLanguage(selectedLanguage);
 }
 
 function applyThemeAndColor() {
@@ -61,17 +50,6 @@ colorSelect.addEventListener("change", function() {
   saveSettingsToLocalStorage();
 });
 
-function applyLanguageAndTranslation() {
-  const selectedLanguage = languageSelect.value;
-
-  localStorage.setItem("selectedLanguage", selectedLanguage);
-
-  loadTranslations(selectedLanguage);
-}
-
-if (storedLanguage) {
-  languageSelect.value = storedLanguage;
-}
 if (storedTheme) {
   themeSelect.value = storedTheme;
 }
@@ -80,19 +58,6 @@ if (storedColor) {
 }
 
 applyThemeAndColor();
-
-
-
-applyLanguageAndTranslation();
-
-languageSelect.addEventListener("change", function() {
-  
-  applyLanguageAndTranslation();
-  saveSettingsToLocalStorage();
-  loadLanguage(this.value);
-});
-
-loadLanguage(languageSelect.value);
 
 hamburger.addEventListener("click", () => {
     leftmenu.classList.toggle("active");
@@ -204,30 +169,6 @@ themeSelect.addEventListener("change", function() {
     localStorage.setItem("selectedColor", this.value);
   });
 
-    languageSelect.addEventListener("change", function() {
-        const selectedLanguage = this.value;
-        loadTranslations(selectedLanguage);
-        localStorage.setItem("selectedLanguage", this.value);
-    });
-
-
-function loadTranslations(language) {
-  const xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-          if (xhr.status === 200) {
-              const translations = JSON.parse(xhr.responseText);
-              translatePage(translations);
-          } else {
-              console.error('Failed to load translations');
-          }
-      }
-  };
-
-  xhr.open('GET', `/jsons/${language}.json`, true);
-  xhr.send();
-}
-
 function translatePage(translations) {
   const elements = document.querySelectorAll('[data-translate]');
   elements.forEach(element => {
@@ -256,40 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
     colorSelect.value = storedColor;
     colorSelect.dispatchEvent(new Event("change"));
   }
-
-  const storedLanguage = localStorage.getItem("selectedLanguage");
-  if (storedLanguage) {
-    languageSelect.value = storedLanguage;
-    loadLanguage(storedLanguage);
-  }
-
-
-  languageSelect.addEventListener("change", function() {
-    applyLanguage();
-  });
 });
-
-loadLanguage(languageSelect.value);
-
-function loadLanguage(language) {
-  const filename = language === 'russian' ? 'jsons/russian.json' : 'jsons/english.json';
-  fetch(filename)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error(`Failed to load language data for ${language}`);
-          }
-          return response.json();
-      })
-      .then(data => {
-          updateLanguageText(data);
-      })
-      .catch(error => {
-          console.error(error);
-      });
-}
-
-function updateLanguageText(data) {
-}
 
 okButton.addEventListener("click", function() {
   disclaimer.style.display = "none";
