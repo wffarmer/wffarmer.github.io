@@ -16,6 +16,7 @@
     --bluetextcolor: #9bcdfd;
     --darklinkcolor: #5ff5ff;
     --lightlinkcolor: #e90606;
+    --lightlinkcolor: #ff8424;
 }
 
 a{
@@ -229,9 +230,13 @@ button span{
     color: white;
 }
 
-p span{
+.heading{
     text-align: center;
     font-size: 1.5em;
+}
+
+.mw{
+    font-weight: 550;
 }
 
 .ok span{
@@ -538,8 +543,8 @@ hr{
     text-align: center;
 }
 
-.footerdisclaimer a:hover{
-    color:#11dfff;
-    transition: ease-in-out 0.3s;
+.lighttheme a:hover{
+    color: #ff9e03;
     cursor:pointer;
+    transition: ease-in-out 0.3s;
 }
