@@ -306,7 +306,7 @@ select{
     width: 100%;
     font-size: 1.4em;
     color: white;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     background-color: #000;
     border: white solid 1.3px;
     padding: 5px;
@@ -319,7 +319,8 @@ select option{
 
 h2, h3, h4{
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    line-height: 1.5;
 }
 
 .leftmenu.active{
@@ -486,7 +487,6 @@ ul {
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 40px;
-    font-size: 1.5em;
     text-align: center;
     font-size: 40px;
     line-height: 1;
