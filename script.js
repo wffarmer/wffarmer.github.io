@@ -13,6 +13,7 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
+
 disclaimerHidden = localStorage.getItem("disclaimerHidden");
 
 function replaceNewlinesWithBreaks(text) {
@@ -156,6 +157,11 @@ themeSelect.addEventListener("change", function() {
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
       content.classList.add(selectedColor);
+    }
+    else{
+      darktheme.classList.add("orange");
+      footer.classList.add("orange");
+      content.classList.add("orange");
     }
     
     if (selectedColor === "red") {
