@@ -13,7 +13,6 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
-
 disclaimerHidden = localStorage.getItem("disclaimerHidden");
 
 function replaceNewlinesWithBreaks(text) {
@@ -23,6 +22,7 @@ function replaceNewlinesWithBreaks(text) {
 if (!theme.classList.contains("darktheme")) {
   leftmenu.classList.add("darktheme");
   footer.classList.add("darktheme");
+  content.classList.add("darktheme");
 }
 
 function saveSettingsToLocalStorage() {
@@ -115,6 +115,8 @@ themeSelect.addEventListener("change", function() {
         topmenu.classList.add("darktheme");
         leftmenu.classList.add("darktheme");
         footer.classList.add("darktheme");
+        content.classList.add("darktheme");
+        content.classList.remove("lighttheme");
         theme.classList.remove("lighttheme");
         topmenu.classList.remove("lighttheme");
         leftmenu.classList.remove("lighttheme");
@@ -127,6 +129,8 @@ themeSelect.addEventListener("change", function() {
         topmenu.classList.add("lighttheme");
         leftmenu.classList.add("lighttheme");
         footer.classList.add("lighttheme");
+        content.classList.add("lighttheme");
+        content.classList.remove("darktheme");
         theme.classList.remove("darktheme"); 
         topmenu.classList.remove("darktheme");
         leftmenu.classList.remove("darktheme");
@@ -147,9 +151,11 @@ themeSelect.addEventListener("change", function() {
 
     darktheme.classList.remove("white", "red", "blue", "orange"); 
     footer.classList.remove("white", "red", "blue", "orange");
+    content.classList.remove("white", "red", "blue", "orange");
     if (selectedColor) { 
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
+      content.classList.add(selectedColor);
     }
     
     if (selectedColor === "red") {
