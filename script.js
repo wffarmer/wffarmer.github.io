@@ -201,15 +201,18 @@ document.addEventListener("DOMContentLoaded", function() {
   const storedTheme = localStorage.getItem("selectedTheme");
   if (storedTheme) {
     themeSelect.value = storedTheme;
-    themeSelect.dispatchEvent(new Event("change")); 
+    themeSelect.dispatchEvent(new Event("change"));
   }
   else{
-    themeSelect.dispatchEvent(new Event("change"))
+    themeSelect.dispatchEvent(new Event("change"));
   }
 
   const storedColor = localStorage.getItem("selectedColor");
   if (storedColor) {
     colorSelect.value = storedColor;
+    colorSelect.dispatchEvent(new Event("change"));
+  }
+  else{
     colorSelect.dispatchEvent(new Event("change"));
   }
 });
