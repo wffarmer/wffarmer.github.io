@@ -13,6 +13,20 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
+const colors = ["white", "red", "blue", "orange"];
+const imageUrls = ["/images/icon.png", "/images/logo.png", "/images/bluelogo.png", "/images/redlogo.png", 
+"/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", "/images/redburger.png", 
+"/images/whiteburger.png", "/images/power.png", "/images/lightburger.png", "/images/lightlogo.png"];
+
+function preloadImages(urls) {
+  urls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+  });
+}
+
+preloadImages(imageUrls);
+
 
 disclaimerHidden = localStorage.getItem("disclaimerHidden");
 
@@ -150,7 +164,11 @@ themeSelect.addEventListener("change", function() {
     const burgerImg = document.getElementById("burgerbars");
     const logoImg = document.getElementById("logo").querySelector("img");
 
-    darktheme.classList.remove("white", "red", "blue", "orange"); 
+    colors.forEach(className => {
+      if (darktheme.classList.contains(className)) {
+          darktheme.classList.remove(className);
+      }
+  });
     footer.classList.remove("white", "red", "blue", "orange");
     content.classList.remove("white", "red", "blue", "orange");
     if (selectedColor) { 
