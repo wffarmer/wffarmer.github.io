@@ -211,7 +211,8 @@ themeSelect.addEventListener("change", function() {
         logoImg.src = "images/logo.png";
     }
   }
-    localStorage.setItem("selectedColor", this.value);
+  applyThemeAndColor();
+  saveSettingsToLocalStorage();
   });
 
 function translatePage(translations) {
