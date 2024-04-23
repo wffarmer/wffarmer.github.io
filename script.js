@@ -69,11 +69,6 @@ themeSelect.addEventListener("change", function() {
   saveSettingsToLocalStorage();
 });
 
-colorSelect.addEventListener("change", function() {
-  applyThemeAndColor();
-  saveSettingsToLocalStorage();
-});
-
 if (storedTheme) {
   themeSelect.value = storedTheme;
 }
@@ -165,8 +160,6 @@ themeSelect.addEventListener("change", function() {
       applyThemeAndColor();
       saveSettingsToLocalStorage();
 
-      //links.style.color = 
-
     localStorage.setItem("selectedTheme", this.value);
   });
 
@@ -190,11 +183,18 @@ themeSelect.addEventListener("change", function() {
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
       content.classList.add(selectedColor);
+      leftmenu.classList.add(selectedColor);
+      colors.forEach(color =>{
+        if(color !== selectedColor){
+        leftmenu.classList.remove(color);
+        }
+      })
     }
     else{
       darktheme.classList.add("orange");
       footer.classList.add("orange");
       content.classList.add("orange");
+      leftmenu.classList.add("orange");
     }
     
     if (selectedColor === "red") {
@@ -237,12 +237,10 @@ document.addEventListener("DOMContentLoaded", function() {
     themeSelect.value = storedTheme;
     themeSelect.dispatchEvent(new Event("change"));
     colorSelect.dispatchEvent(new Event("change"));
-
   }
   else{
     themeSelect.dispatchEvent(new Event("change"));
     colorSelect.dispatchEvent(new Event("change"));
-
   }
 
   const storedColor = localStorage.getItem("selectedColor");
