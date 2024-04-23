@@ -202,9 +202,13 @@ document.addEventListener("DOMContentLoaded", function() {
   if (storedTheme) {
     themeSelect.value = storedTheme;
     themeSelect.dispatchEvent(new Event("change"));
+    colorSelect.dispatchEvent(new Event("change"));
+
   }
   else{
     themeSelect.dispatchEvent(new Event("change"));
+    colorSelect.dispatchEvent(new Event("change"));
+
   }
 
   const storedColor = localStorage.getItem("selectedColor");
