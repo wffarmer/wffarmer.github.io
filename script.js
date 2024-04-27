@@ -129,6 +129,8 @@ document.addEventListener("click", (event) => {
     if (leftmenu.classList.contains("active") && !isLeftMenuClick && !isDisclaimerButtonClick) {
       leftmenu.classList.remove("active");
       disclaimer.style.left = "0";
+      disclaimer.style.left = "1";
+      disclaimer.style.left = "0";
       disclaimer.style.width = "100%";
     setTimeout(function() {
       maintext.style.paddingTop = (30 + disclaimer.clientHeight) + 'px';
