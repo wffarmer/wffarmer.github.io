@@ -15,15 +15,53 @@ const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
 const colors = ["white", "red", "blue", "orange"];
+const searchForm = document.getElementById("searchform");
+const searchInput = document.getElementById("searcharea");
 const imageUrls = ["/images/icon.png", "/images/logo.png", "/images/bluelogo.png", "/images/redlogo.png", 
 "/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", "/images/redburger.png", 
 "/images/whiteburger.png", "/images/power.png", "/images/lightburger.png", "/images/lightlogo.png"];
+const searchResultsList = document.getElementById("searchResultsList");
+const pages = [ 
+  {title:"The Best Way to Farm Platinum", url:"plat.html"}, 
+  {title:"Void Fissures", url:"voidfissures.html"}, 
+  {title:"Builds for Void Fissures", url:"buildsforfissures.html"}
+];
+
+
 
 disclaimershow = localStorage.getItem("disclaimershow");
 if(localStorage.getItem("disclaimershow") !== "true" && localStorage.getItem("disclaimershow") !== "false")
 {
   disclaimershow = "true";
 }
+
+function getSearchResults(searchTerm) {
+  const filteredResults = pages.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()));
+  return filteredResults;
+}
+
+searchForm.addEventListener("submit", function(event) {
+  const searchTerm = searchInput.value.trim().toLowerCase(); // Lowercase the search term
+  event.preventDefault(); 
+
+  const results = [];
+  const titles = pages.map(page => page.title);
+
+
+  for (const title of titles) {
+    if (title.toLowerCase().includes(searchTerm)) {
+      results.push(title); 
+    }
+  }
+  
+
+  if (results.length > 0) {
+    window.location.href = `searchresults.html?s=${searchTerm}`;
+    dynamicContentElement.textContent = `Search Results for: ${searchTerm}`;
+  } else {
+    window.location.href = `nothingfound.html?s=${searchTerm}`;
+  }
+});
 
 function preloadImages(urls) {
   urls.forEach(url => {
@@ -56,7 +94,8 @@ $(window).on('load', function() {
   $('.content').show();
     footer.style.display = "flex";
   $('.footer').show();
-}, 600);
+  searchInput.value = "";
+}, 100);
 });
 
 preloadImages(imageUrls);

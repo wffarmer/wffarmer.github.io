@@ -15,7 +15,7 @@
     --whitetextcolor: #fff;
     --bluetextcolor: #9bcdfd;
     --darklinkcolor: #5ff5ff;
-    --lightlinkcolor: #e90606;
+    --lightlinkcolortimedotcom: #e90606;
     --lightlinkcolor: #ff8424;
 }
 
@@ -133,7 +133,31 @@ background-color: var(--darkbg);
     color: var(--lightbgtext);
 }
 
-.lighttheme a{
+.content p{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.lighttheme.content a{
+    color:var(--lightlinkcolortimedotcom);
+}
+
+.lighttheme.footer a:hover{
+    color: #ff9e03;
+    cursor:pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.lighttheme.content a:hover{
+    color: var(--lightlinkcolortimedotcom);
+}
+
+.lighttheme.content a:hover{
+    color:var(--lightlinkcolortimedotcom);
+}
+
+.lighttheme.footer a{
     color:var(--lightlinkcolor);
 }
 
@@ -571,10 +595,4 @@ hr{
     color:white;
     font-size: 14px;
     text-align: center;
-}
-
-.lighttheme a:hover{
-    color: #ff9e03;
-    cursor:pointer;
-    transition: ease-in-out 0.3s;
 }
