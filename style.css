@@ -135,8 +135,6 @@ background-color: var(--darkbg);
 
 .content p{
     font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .lighttheme.content a{
@@ -499,7 +497,7 @@ color: var(--redtextcolor);
             }
 
 .content ul a{
-    font-size: 1.8rem;
+    font-size: 20px;
 }
 
 .content ul li img {

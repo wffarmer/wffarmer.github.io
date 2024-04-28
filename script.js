@@ -17,6 +17,7 @@ const footer = document.querySelector(".footer");
 const colors = ["white", "red", "blue", "orange"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
+const elements = document.querySelectorAll(".content ul li p");
 const imageUrls = ["/images/icon.png", "/images/logo.png", "/images/bluelogo.png", "/images/redlogo.png", 
 "/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", "/images/redburger.png", 
 "/images/whiteburger.png", "/images/power.png", "/images/lightburger.png", "/images/lightlogo.png"];
@@ -311,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function() {
   else{
     colorSelect.dispatchEvent(new Event("change"));
   }
+  var screenWidth = window.innerWidth;
 });
 
 okButton.addEventListener("click", function() {
