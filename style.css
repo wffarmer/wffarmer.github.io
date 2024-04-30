@@ -504,7 +504,7 @@ color: var(--redtextcolor);
     width: 240px;
     height: 135px;
     object-fit: cover;
-    border: 2px solid gray;
+    border: 0.3px solid gray;
 }
 
 .content ul li span {
