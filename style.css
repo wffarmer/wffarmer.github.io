@@ -562,6 +562,9 @@ color: var(--redtextcolor);
     .content ul li{
         margin-bottom: 30px;
     }
+    .content ul li.collapse{
+        margin-bottom: 6.8px;
+    }
     .maintext{
         margin-left: 25px;
         margin-right: 25px;
