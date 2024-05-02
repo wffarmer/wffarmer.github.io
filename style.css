@@ -258,8 +258,25 @@ button span{
 }
 
 .heading{
-    text-align: center;
-    font-size: 1.5em;
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2.4;
+}
+
+.subheading{
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.sb{
+    margin-bottom:12px;
+    display: block;
+    font-style: italic;
 }
 
 .mw{
@@ -527,7 +544,7 @@ color: var(--redtextcolor);
 }
 
 .maintext{
-    font-weight: 700;
+    font-weight: bold;
     /*display: block;*/
     padding-top: 30px;
     padding-bottom: 10px;
@@ -540,6 +557,7 @@ color: var(--redtextcolor);
 }
 
 .bottomtext{
+    line-height: 1.8;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 35px;
@@ -597,4 +615,8 @@ hr{
     color:white;
     font-size: 14px;
     text-align: center;
+}
+
+.footerdisclaimer p{
+    font-size: 14px;
 }
