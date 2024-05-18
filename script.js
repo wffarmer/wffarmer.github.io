@@ -23,7 +23,7 @@ const imageUrls = ["/images/icon.png", "/images/logo.png", "/images/bluelogo.png
 "/images/lightlogo.png"];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
-  {title:"The Best Warframe Platinum Farm for Beginners", url:"plat.html"}, 
+  {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
   {title:"Void Fissures", url:"voidfissures.html"}, 
   {title:"Warframe Builds for Void Fissures", url:"buildsforfissures.html"}
 ];
