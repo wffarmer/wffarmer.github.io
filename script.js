@@ -6,7 +6,6 @@ const themeSelect = document.querySelector("select[name='theme']");
 const colorSelect = document.querySelector("select[name='color']");
 const okButton = document.querySelector(".ok");
 const disclaimer = document.querySelector(".disclaimer");  
-const p = document.querySelector(".maintext");
 const content = document.querySelector(".content");
 const links = document.querySelectorAll(".content a");
 const storedTheme = localStorage.getItem("selectedTheme");
@@ -24,7 +23,7 @@ const imageUrls = ["/images/icon.png", "/images/logo.png", "/images/bluelogo.png
 "/images/lightlogo.png"];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
-  {title:"The Best Way to Farm Warframe Platinum", url:"plat.html"}, 
+  {title:"The Best Warframe Platinum Farm for Beginners", url:"plat.html"}, 
   {title:"Void Fissures", url:"voidfissures.html"}, 
   {title:"Warframe Builds for Void Fissures", url:"buildsforfissures.html"}
 ];
@@ -43,27 +42,27 @@ function getSearchResults(searchTerm) {
 }
 
 searchForm.addEventListener("submit", function(event) {
-  const searchTerm = searchInput.value.trim().toLowerCase(); // Lowercase the search term
-  event.preventDefault(); 
-
-  const results = [];
-  const titles = pages.map(page => page.title);
-
-
-  for (const title of titles) {
-    if (title.toLowerCase().includes(searchTerm)) {
-      results.push(title); 
-    }
-  }
+   const searchTerm = searchInput.value.trim().toLowerCase(); // Lowercase the search term
+   event.preventDefault(); 
   
-
-  if (results.length > 0) {
+   const results = [];
+   const titles = pages.map(page => page.title);
+  
+  
+   for (const title of titles) {
+    if (title.toLowerCase().includes(searchTerm)) {
+     results.push(title); 
+    }
+   }
+   
+  
+   if (results.length > 0) {
     window.location.href = `searchresults.html?s=${searchTerm}`;
-    dynamicContentElement.textContent = `Search Results for: ${searchTerm}`;
-  } else {
+    console.log(results);
+   } else {
     window.location.href = `nothingfound.html?s=${searchTerm}`;
-  }
-});
+   }
+  });
 
 function preloadImages(urls) {
   urls.forEach(url => {
