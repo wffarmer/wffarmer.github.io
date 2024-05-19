@@ -11,6 +11,7 @@
     --lightbgmenu: #f7f4e4;
     --darkbgmenu: #000;
     --orangetextcolor: #ff8424;
+    --yellowtextcolor:#f0db4f;
     --redtextcolor: tomato;
     --whitetextcolor: #fff;
     --bluetextcolor: #9bcdfd;
@@ -109,7 +110,7 @@ margin: 0;
 
 .theme{
     background-color: var(--darkbg);
-    color: var(--orangetextcolor);
+    color: var(--yellowtextcolor);
     min-height: 100vh;
     z-index: -100;
     overflow-y: hidden;
@@ -378,35 +379,43 @@ display: block;
 }
 
 #orange{
-    color: #ff8424;
+    color: var(--orangetextcolor);
+}
+
+#yellow{
+    color: var(--yellowtextcolor);
+}
+
+#yellow:hover{
+    color: var(--yellowtextcolor);
 }
 
 #orange:hover{
-    color: #ff8424;
+    color: var(--orangetextcolor);
 }
 
 #red{
-color: tomato;
+    color: var(--redtextcolor);
 }
 
 #red:hover{
-    color: tomato;
+    color: var(--redtextcolor);
 }
 
 #blue{
-color: #9bcdfd;
+color: var(--bluetextcolor);
 }
 
 #blue:hover{
-    color: #9bcdfd;
+    color: var(--bluetextcolor);
 }
 
 #white{
-    color: #fff;
+    color: var(--whitetextcolor);
 }
 
 #white:hover{
-    color: #fff;
+    color: var(--whitetextcolor);
 }
 
 .lighttheme #togglecolor{
@@ -417,6 +426,9 @@ color: #9bcdfd;
     display: none;
 }
 
+.darktheme.yellow{
+    color: var(--yellowtextcolor);
+}
 .darktheme.orange{
     color: var(--orangetextcolor);
 }.darktheme.white{
@@ -514,6 +526,9 @@ color: var(--redtextcolor);
         .content.darktheme.white ul a{
             color: var(--whitetextcolor);
             }
+            .content.darktheme.yellow ul a{
+                color: var(--yellowtextcolor);
+                }
 
 .content ul a{
     font-size: 20px;

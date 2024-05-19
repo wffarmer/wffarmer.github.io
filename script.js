@@ -13,14 +13,14 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
-const colors = ["white", "red", "blue", "orange"];
+const colors = ["white", "red", "blue", "orange", "yellow"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
-const imageUrls = ["/images/icon.png", "/images/logo.png", "/images/bluelogo.png", "/images/redlogo.png", 
-"/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", "/images/redburger.png", 
-"/images/whiteburger.png", "/images/1.png", "/images/2.png", "/images/lightburger.png", "/images/builds.png",
-"/images/lightlogo.png"];
+const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellowburger.png", "/images/logo.png", 
+"/images/bluelogo.png", "/images/redlogo.png", "/images/whitelogo.png", "/images/burger.png", 
+"/images/blueburger.png", "/images/redburger.png", "/images/whiteburger.png", "/images/1.png", 
+"/images/2.png", "/images/lightburger.png", "/images/builds.png", "/images/lightlogo.png"];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
@@ -238,9 +238,9 @@ themeSelect.addEventListener("change", function() {
       }
   });
   if(darktheme !== null){
-    footer.classList.remove("white", "red", "blue", "orange");
-    content.classList.remove("white", "red", "blue", "orange");
-    topmenu.classList.remove("white", "red", "blue", "orange");
+    footer.classList.remove("white", "red", "blue", "orange", "yellow");
+    content.classList.remove("white", "red", "blue", "orange", "yellow");
+    topmenu.classList.remove("white", "red", "blue", "orange", "yellow");
     if (selectedColor) { 
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
@@ -252,11 +252,11 @@ themeSelect.addEventListener("change", function() {
         }
       })
     }
-    else{
-      darktheme.classList.add("orange");
-      footer.classList.add("orange");
-      content.classList.add("orange");
-      leftmenu.classList.add("orange");
+    else{ //DEFAULT COLOR
+      darktheme.classList.add("yellow");
+      footer.classList.add("yellow");
+      content.classList.add("yellow");
+      leftmenu.classList.add("yellow");
     }
     
     if (selectedColor === "red") {
@@ -268,7 +268,12 @@ themeSelect.addEventListener("change", function() {
     } else if (selectedColor === "blue") {
         burgerImg.src = "images/blueburger.png"; 
         logoImg.src = "images/bluelogo.png";
-    } else if (selectedColor === "orange") {
+    } 
+    else if (selectedColor === "yellow") {
+      burgerImg.src = "images/yellowburger.png"; 
+      logoImg.src = "images/yellowlogo.png";
+    }
+    else if (selectedColor === "orange") {
         burgerImg.src = "images/burger.png"; 
         logoImg.src = "images/logo.png";
     }
