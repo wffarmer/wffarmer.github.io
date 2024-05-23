@@ -588,6 +588,13 @@ color: var(--redtextcolor);
     
 }
 
+.pagetext img{
+    width: 100%; 
+    height: auto;  
+    display: inline-block; 
+    position: relative;
+}
+
 .pagetext p{
     line-height: 1.8;
 }

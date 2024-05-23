@@ -21,7 +21,7 @@ const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellow
 "/images/bluelogo.png", "/images/redlogo.png", "/images/whitelogo.png", "/images/burger.png", 
 "/images/blueburger.png", "/images/redburger.png", "/images/whiteburger.png", "/images/1.png", 
 "/images/2.png", "/images/lightburger.png", "/images/builds.png", "/images/lightlogo.png",
-"/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png"];
+"/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png", "/images/dexpixia.png"];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
