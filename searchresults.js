@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const searchResultsList = document.getElementById("searchResultsList");
     const topTitle = document.getElementById("toptitle");
-
+    const nfpt = document.getElementById("nfpt");
     // Function to get URL parameters
     function getUrlParams() {
         const params = {};
@@ -54,14 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 listItem.appendChild(title);
                 searchResultsList.appendChild(listItem);
             });
-        } else {
-            displayNoResults();
         }
-    }
-
-    function displayNoResults() {
-        const noResultsMessage = document.createElement('p');
-        noResultsMessage.textContent = "No results found.";
-        searchResultsList.appendChild(noResultsMessage);
     }
 });
