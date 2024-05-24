@@ -25,7 +25,7 @@ const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellow
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
-  {title:"Void Fissures", url:"voidfissures.html"}, 
+  {title:"Warframe Void Fissures Guide", url:"voidfissures.html"}, 
   {title:"Warframe Builds for Void Fissures", url:"buildsforfissures.html"}
 ];
 
@@ -58,7 +58,7 @@ searchForm.addEventListener("submit", function(event) {
    
   
    if (results.length > 0) {
-    window.location.href = `searchresults.html?s=${searchTerm}`;
+    window.location.href = `searchresults.html?s=${encodeURIComponent(searchTerm)}`;
     console.log(results);
    } else {
     window.location.href = `nothingfound.html?s=${searchTerm}`;
