@@ -5,8 +5,7 @@
 }
 
 :root{
-    /*--darkbg: rgb(23, 30, 33);*/
-    --darkbg: rgb(21,21,21);
+    --darkbg: rgb(23, 30, 33);
     --lightbg: #fff;
     --lightbgtext: #000;
     --lightbgmenu: #f7f4e4;
