@@ -5,16 +5,17 @@
 }
 
 :root{
-    --darkbg: rgb(23, 30, 33);
+    /*--darkbg: rgb(23, 30, 33);*/
+    --darkbg: rgb(21,21,21);
     --lightbg: #fff;
     --lightbgtext: #000;
     --lightbgmenu: #f7f4e4;
     --darkbgmenu: #000;
     --orangetextcolor: #ff8424;
     --yellowtextcolor:#f0db4f;
-    --redtextcolor: tomato;
+    --redtextcolor: #f92e46;
     --whitetextcolor: #fff;
-    --bluetextcolor: #9bcdfd;
+    --bluetextcolor: #3596d1;
     --darklinkcolor: #5ff5ff;
     --lightlinkcolortimedotcom: #e90606;
     --lightlinkcolor: #ff8424;
@@ -203,7 +204,7 @@ background-color: var(--darkbg);
     padding-bottom: 2.8px;
     padding-top: 2.8px;
     background-clip: content-box;
-    background-color: tomato;
+    background-color: var(--redtextcolor);
     display: inline-block;
 }
 
@@ -238,13 +239,13 @@ background-color: var(--darkbg);
     user-select: none;
     font-weight: 500;
     background-clip: content-box;
-    background-color: tomato;
+    background-color: var(--redtextcolor);
     border: none;
 }
 
 .ok:hover{
     cursor: pointer;
-    background-color: red;
+    background-color: mediumpurple;
     transition: ease-in-out 300ms;
 }
 
@@ -305,9 +306,10 @@ button i{
 }
 
 #submit:hover{
-    background-color: red;
+    background-color: #17a67e;
     transition: ease-in-out 300ms;
 }
+
 
 input{
     width: 200px;
@@ -496,7 +498,7 @@ ul {
 
 .content ul li {
     width: 240px;
-    margin: 0 5px 5px 0; /* Equal left and right margin, and bottom margin */
+    margin: 0 5px 5px 0;
     display: inline-block;
     position: relative;
     font-size: 1.5em;
@@ -600,16 +602,13 @@ color: var(--redtextcolor);
 }
 
 @media all and (max-width: 768px) {
-    .content ul {
+    .content ul{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .content ul li{
         margin-bottom: 30px;
-    }
-    .content ul li.collapse{
-        margin-bottom: 6.8px;
     }
     .maintext{
         margin-left: 25px;

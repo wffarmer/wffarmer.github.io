@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
         topTitle.textContent = `Search results for "${searchTerm}"`
         const filteredResults = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
         displaySearchResults(filteredResults);
-    } else {
-        displayNoResults();
     }
 
     function displaySearchResults(results) {

@@ -46,6 +46,11 @@ searchForm.addEventListener("submit", function(event) {
    const searchTerm = searchInput.value.trim().toLowerCase(); // Lowercase the search term
    event.preventDefault(); 
   
+   if (searchTerm === '') {
+    // If the search term is empty, do nothing
+    return;
+  }
+
    const results = [];
    const titles = pages.map(page => page.title);
   
