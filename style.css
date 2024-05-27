@@ -305,7 +305,7 @@ button i{
 }
 
 #submit:hover{
-    background-color: #17a67e;
+    background-color: mediumpurple;
     transition: ease-in-out 300ms;
 }
 
