@@ -12,6 +12,7 @@
     --darkbgmenu: #000;
     --orangetextcolor: #ff8424;
     --yellowtextcolor:#f0db4f;
+    --limetextcolor: #88ff88;
     --redtextcolor: #f92e46;
     --whitetextcolor: #fff;
     --bluetextcolor: #3596d1;
@@ -104,7 +105,7 @@ display: block;
 font-family: "Arial";
 min-height: 100vh;
 font-size: 14px;
-font-weight: 400;
+font-weight: 520;
 margin: 0;
 }
 
@@ -383,6 +384,14 @@ display: block;
     color: var(--orangetextcolor);
 }
 
+#lime{
+    color: var(--limetextcolor);
+}
+
+#lime:hover{
+    color: var(--limetextcolor);
+}
+
 #yellow{
     color: var(--yellowtextcolor);
 }
@@ -427,10 +436,11 @@ color: var(--bluetextcolor);
     display: none;
 }
 
-.darktheme.yellow{
+.darktheme.lime{
+    color: var(--limetextcolor);
+}.darktheme.yellow{
     color: var(--yellowtextcolor);
-}
-.darktheme.orange{
+}.darktheme.orange{
     color: var(--orangetextcolor);
 }.darktheme.white{
     color: var(--whitetextcolor);
@@ -529,6 +539,8 @@ color: var(--redtextcolor);
             }
             .content.darktheme.yellow ul a{
                 color: var(--yellowtextcolor);
+                }.content.darktheme.lime ul a{
+                    color: var(--limetextcolor);
                 }
 
 .content ul a{
@@ -589,11 +601,52 @@ color: var(--redtextcolor);
     
 }
 
+
 .pagetext img{
     width: 100%; 
     height: auto;  
     display: inline-block; 
     position: relative;
+}.pagetext img.ninety{
+    width: 90vw;
+    height: auto;
+    left: 5vw;
+}.pagetext img.eighty{
+    width: 80vw;
+    height: auto;
+    left: 10vw;
+}.pagetext img.s5{
+    width: 75vw;
+    height: auto;
+    left: 12.5vw;
+}.pagetext img.seventy{
+    width: 70vw;
+    height: auto;
+    left: 15vw;
+}.pagetext img.sixty{
+    width: 60vw;
+    height: auto;
+    left: 20vw;
+}.pagetext img.fifty{
+    width: 50vw;
+    height: auto;
+    left: 25vw;
+}.pagetext img.forty{
+    width: 40vw;
+    height: auto;
+    left: 30vw;
+}.pagetext img.thirty{
+    width: 30vw;
+    height: auto;
+    left: 35vw;
+}.pagetext img.twenty{
+    width: 20vw;
+    height: auto;
+    left: 40vw;
+}.pagetext img.ten{
+    width: 10vw;
+    height: auto;
+    left: 45vw;
 }
 
 .pagetext p{

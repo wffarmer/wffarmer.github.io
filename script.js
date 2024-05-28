@@ -13,15 +13,17 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
-const colors = ["white", "red", "blue", "orange", "yellow"];
+const colors = ["white", "red", "blue", "orange", "yellow", "lime"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
-const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellowburger.png", "/images/logo.png", 
-"/images/bluelogo.png", "/images/redlogo.png", "/images/whitelogo.png", "/images/burger.png", 
-"/images/blueburger.png", "/images/redburger.png", "/images/whiteburger.png", "/images/1.png", 
-"/images/2.png", "/images/lightburger.png", "/images/builds.png", "/images/lightlogo.png",
-"/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png", "/images/dexpixia.png"];
+const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellowburger.png", "/images/logo.png",
+"/images/limelogo.png", "/images/limeburger.png", "/images/bluelogo.png", "/images/redlogo.png", 
+"/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", "/images/redburger.png", 
+"/images/whiteburger.png", "/images/1.png", "/images/2.png", "/images/lightburger.png", "/images/builds.png", 
+"/images/lightlogo.png", "/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png", "/images/dexpixia.png", 
+"/images/39s.png","/images/ashset.png", "/images/can.png", "/images/corrupt.png", "/images/filters.png", 
+"/images/goodprimes.png", "/images/junk288.png", "/images/wts.png", "/images/dongo.png"];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
@@ -244,9 +246,9 @@ themeSelect.addEventListener("change", function() {
       }
   });
   if(darktheme !== null){
-    footer.classList.remove("white", "red", "blue", "orange", "yellow");
-    content.classList.remove("white", "red", "blue", "orange", "yellow");
-    topmenu.classList.remove("white", "red", "blue", "orange", "yellow");
+    footer.classList.remove("white", "red", "blue", "orange", "yellow", "lime");
+    content.classList.remove("white", "red", "blue", "orange", "yellow", "lime");
+    topmenu.classList.remove("white", "red", "blue", "orange", "yellow", "lime");
     if (selectedColor) { 
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
@@ -282,6 +284,10 @@ themeSelect.addEventListener("change", function() {
     else if (selectedColor === "orange") {
         burgerImg.src = "images/burger.png"; 
         logoImg.src = "images/logo.png";
+    }
+    else if (selectedColor === "lime") {
+      burgerImg.src = "images/limeburger.png"; 
+      logoImg.src = "images/limelogo.png";
     }
   }
   applyThemeAndColor();
