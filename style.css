@@ -15,6 +15,7 @@
     --limetextcolor: #88ff88;
     --redtextcolor: #f92e46;
     --whitetextcolor: #fff;
+    --lavendertextcolor: #c486bf;
     --bluetextcolor: #3596d1;
     --darklinkcolor: #5ff5ff;
     --lightlinkcolortimedotcom: #e90606;
@@ -111,7 +112,7 @@ margin: 0;
 
 .theme{
     background-color: var(--darkbg);
-    color: var(--yellowtextcolor);
+    color: var(--whitetextcolor);
     min-height: 100vh;
     z-index: -100;
     overflow-y: hidden;
@@ -384,6 +385,14 @@ display: block;
     color: var(--orangetextcolor);
 }
 
+#lavender{
+    color: var(--lavendertextcolor);
+}
+
+#lavender:hover{
+    color: var(--lavendertextcolor);
+}
+
 #lime{
     color: var(--limetextcolor);
 }
@@ -448,6 +457,8 @@ color: var(--bluetextcolor);
     color: var(--redtextcolor);
 }.darktheme.blue{
     color: var(--bluetextcolor);
+}.darktheme.lavender{
+    color: var(--lavendertextcolor);
 }
 
 
@@ -541,6 +552,8 @@ color: var(--redtextcolor);
                 color: var(--yellowtextcolor);
                 }.content.darktheme.lime ul a{
                     color: var(--limetextcolor);
+                }.content.darktheme.lavender ul a{
+                    color: var(--lavendertextcolor);
                 }
 
 .content ul a{
@@ -669,6 +682,12 @@ color: var(--redtextcolor);
     .bottomtext{
         margin-left: 25px;
         margin-right:25px;
+    }
+    .ninety, .eighty, .s5, .seventy, .sixty, .fifty, .forty, .thirty, .twenty, .ten{
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        
     }
   }
 

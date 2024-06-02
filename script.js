@@ -13,17 +13,17 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
-const colors = ["white", "red", "blue", "orange", "yellow", "lime"];
+const colors = ["white", "red", "blue", "orange", "yellow", "lime", "lavender"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
 const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellowburger.png", "/images/logo.png",
-"/images/limelogo.png", "/images/limeburger.png", "/images/bluelogo.png", "/images/redlogo.png", 
-"/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", "/images/redburger.png", 
-"/images/whiteburger.png", "/images/1.png", "/images/2.png", "/images/lightburger.png", "/images/builds.png", 
-"/images/lightlogo.png", "/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png", "/images/dexpixia.png", 
-"/images/39s.png","/images/ashset.png", "/images/can.png", "/images/corrupt.png", "/images/filters.png", 
-"/images/goodprimes.png", "/images/junk288.png", "/images/wts.png", "/images/dongo.png"];
+"/images/limelogo.png", "/images/limeburger.png", "/images/bluelogo.png", "/images/redlogo.png", "/images/lavenderlogo.png",
+"/images/lavenderburger.png", "/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", 
+"/images/redburger.png", "/images/whiteburger.png", "/images/1.png", "/images/2.png", "/images/lightburger.png", 
+"/images/builds.png", "/images/lightlogo.png", "/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png", 
+"/images/dexpixia.png", "/images/39s.png","/images/ashset.png", "/images/can.png", "/images/corrupt.png", 
+"/images/filters.png", "/images/goodprimes.png", "/images/junk288.png", "/images/wts.png", "/images/dongo.png"];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
@@ -246,9 +246,9 @@ themeSelect.addEventListener("change", function() {
       }
   });
   if(darktheme !== null){
-    footer.classList.remove("white", "red", "blue", "orange", "yellow", "lime");
-    content.classList.remove("white", "red", "blue", "orange", "yellow", "lime");
-    topmenu.classList.remove("white", "red", "blue", "orange", "yellow", "lime");
+    footer.classList.remove("white", "red", "blue", "orange", "yellow", "lime", "lavender");
+    content.classList.remove("white", "red", "blue", "orange", "yellow", "lime", "lavender");
+    topmenu.classList.remove("white", "red", "blue", "orange", "yellow", "lime", "lavender");
     if (selectedColor) { 
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
@@ -261,10 +261,10 @@ themeSelect.addEventListener("change", function() {
       })
     }
     else{ //DEFAULT COLOR
-      darktheme.classList.add("yellow");
-      footer.classList.add("yellow");
-      content.classList.add("yellow");
-      leftmenu.classList.add("yellow");
+      darktheme.classList.add("white");
+      footer.classList.add("white");
+      content.classList.add("white");
+      leftmenu.classList.add("white");
     }
     
     if (selectedColor === "red") {
@@ -288,6 +288,9 @@ themeSelect.addEventListener("change", function() {
     else if (selectedColor === "lime") {
       burgerImg.src = "images/limeburger.png"; 
       logoImg.src = "images/limelogo.png";
+    }else if (selectedColor === "lavender") {
+      burgerImg.src = "images/lavenderburger.png"; 
+      logoImg.src = "images/lavenderlogo.png";
     }
   }
   applyThemeAndColor();
