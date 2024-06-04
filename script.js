@@ -17,18 +17,31 @@ const colors = ["white", "red", "blue", "orange", "yellow", "lime", "lavender"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
-const imageUrls = ["/images/icon.png", "/images/yellowlogo.png", "/images/yellowburger.png", "/images/logo.png",
-"/images/limelogo.png", "/images/limeburger.png", "/images/bluelogo.png", "/images/redlogo.png", "/images/lavenderlogo.png",
-"/images/lavenderburger.png", "/images/whitelogo.png", "/images/burger.png", "/images/blueburger.png", 
-"/images/redburger.png", "/images/whiteburger.png", "/images/1.png", "/images/2.png", "/images/lightburger.png", 
-"/images/builds.png", "/images/lightlogo.png", "/images/gauss1.png", "/images/gauss2.png", "/images/titania1.png", 
-"/images/dexpixia.png", "/images/39s.png","/images/ashset.png", "/images/can.png", "/images/corrupt.png", 
-"/images/filters.png", "/images/goodprimes.png", "/images/junk288.png", "/images/wts.png", "/images/dongo.png"];
+const imageUrls = ["/images/icon.png", 
+"/images/whiteburger.png", "/images/whitelogo.png", 
+"/images/lightburger.png", "/images/lightlogo.png", 
+"/images/burger.png", "/images/logo.png", 
+"/images/yellowlogo.png", "/images/yellowburger.png", 
+"/images/limelogo.png", "/images/limeburger.png", 
+"/images/lavenderlogo.png", "/images/lavenderburger.png",
+"/images/bluelogo.png", "/images/blueburger.png", 
+"/images/redlogo.png", "/images/redburger.png", 
+"/images/1.png", "/images/2.png", "/images/builds.png", 
+"/images/can.png", "/images/wts.png", "/images/dongo.png", "/images/freerev.png", "/images/hub.png", "/images/ashset.png",
+"/images/junk288.png", "/images/junk373.png", "/images/goodprimes.png", "/images/filters.png", 
+"/images/reactant.png", "/images/corrupt.png", 
+"/images/smeeta.png", "/images/39s.png", "/images/gauss1.png", "/images/gauss2.png", "/images/3amber.png", 
+"/images/panzer.png", "/images/titania1.png", "/images/poise.png", "/images/dexpixia.png", 
+
+
+ 
+
+];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
   {title:"Warframe Void Fissures Guide", url:"voidfissures.html"}, 
-  {title:"Warframe Builds for Void Fissures", url:"buildsforfissures.html"}
+  {title:"Strong Warframe Builds for Quick Void Fissures", url:"buildsforfissures.html"}
 ];
 
 
