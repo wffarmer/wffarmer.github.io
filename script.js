@@ -17,21 +17,21 @@ const colors = ["white", "red", "blue", "orange", "yellow", "lime", "lavender"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
-const imageUrls = ["/images/icon.png", 
-"/images/whiteburger.png", "/images/whitelogo.png", 
-"/images/lightburger.png", "/images/lightlogo.png", 
-"/images/burger.png", "/images/logo.png", 
-"/images/yellowlogo.png", "/images/yellowburger.png", 
-"/images/limelogo.png", "/images/limeburger.png", 
-"/images/lavenderlogo.png", "/images/lavenderburger.png",
-"/images/bluelogo.png", "/images/blueburger.png", 
-"/images/redlogo.png", "/images/redburger.png", 
+const imageUrls = ["/images/icon.webp", 
+"/images/whiteburger.webp", "/images/whitelogo.webp", 
+"/images/lightburger.webp", "/images/lightlogo.webp", 
+"/images/burger.webp", "/images/logo.webp", 
+"/images/yellowlogo.webp", "/images/yellowburger.webp", 
+"/images/limelogo.webp", "/images/limeburger.webp", 
+"/images/lavenderlogo.webp", "/images/lavenderburger.webp",
+"/images/bluelogo.webp", "/images/blueburger.webp", 
+"/images/redlogo.webp", "/images/redburger.webp", 
 "/images/1.webp", "/images/2.webp", "/images/builds.webp", 
-"/images/can.png", "/images/wts.png", "/images/dongo.png", "/images/freerev.png", "/images/hub.png", "/images/ashset.png",
-"/images/junk288.png", "/images/junk373.png", "/images/goodprimes.png", "/images/filters.png", 
-"/images/reactant.png", "/images/corrupt.png", 
-"/images/smeeta.png", "/images/39s.png", "/images/gauss1.png", "/images/gauss2.png", "/images/3amber.png", 
-"/images/panzer.png", "/images/titania1.png", "/images/poise.png", "/images/dexpixia.png", 
+"/images/can.webp", "/images/wts.webp", "/images/dongo.webp", "/images/freerev.webp", "/images/hub.webp", "/images/ashset.webp",
+"/images/junk288.webp", "/images/junk373.webp", "/images/goodprimes.webp", "/images/filters.webp", 
+"/images/reactant.webp", "/images/corrupt.webp", 
+"/images/smeeta.webp", "/images/39s.webp", "/images/gauss1.webp", "/images/gauss2.webp", "/images/3amber.webp", 
+"/images/panzer.webp", "/images/titania1.webp", "/images/poise.webp", "/images/dexpixia.webp", 
 
 
  
@@ -210,8 +210,8 @@ themeSelect.addEventListener("change", function() {
 
 
     if (selectedTheme === "darktheme") {
-        burgerImg.src = `images/${logoSuffix}burger.png`; 
-        logoImg.src = `images/${logoSuffix}logo.png`;
+        burgerImg.src = `images/${logoSuffix}burger.webp`; 
+        logoImg.src = `images/${logoSuffix}logo.webp`;
         theme.classList.add("darktheme");
         topmenu.classList.add("darktheme");
         leftmenu.classList.add("darktheme");
@@ -224,8 +224,8 @@ themeSelect.addEventListener("change", function() {
         footer.classList.remove("lighttheme");
         localStorage.setItem("selectedTheme", this.value);
       } else if (selectedTheme === "lighttheme") {
-        burgerImg.src = "images/lightburger.png";
-        logoImg.src = "images/lightlogo.png";
+        burgerImg.src = "images/lightburger.webp";
+        logoImg.src = "images/lightlogo.webp";
         theme.classList.add("lighttheme"); 
         topmenu.classList.add("lighttheme");
         leftmenu.classList.add("lighttheme");
@@ -281,29 +281,29 @@ themeSelect.addEventListener("change", function() {
     }
     
     if (selectedColor === "red") {
-        burgerImg.src = "images/redburger.png"; 
-        logoImg.src = "images/redlogo.png";
+        burgerImg.src = "images/redburger.webp"; 
+        logoImg.src = "images/redlogo.webp";
     } else if (selectedColor === "white") {
-        burgerImg.src = "images/whiteburger.png"; 
-        logoImg.src = "images/whitelogo.png";
+        burgerImg.src = "images/whiteburger.webp"; 
+        logoImg.src = "images/whitelogo.webp";
     } else if (selectedColor === "blue") {
-        burgerImg.src = "images/blueburger.png"; 
-        logoImg.src = "images/bluelogo.png";
+        burgerImg.src = "images/blueburger.webp"; 
+        logoImg.src = "images/bluelogo.webp";
     } 
     else if (selectedColor === "yellow") {
-      burgerImg.src = "images/yellowburger.png"; 
-      logoImg.src = "images/yellowlogo.png";
+      burgerImg.src = "images/yellowburger.webp"; 
+      logoImg.src = "images/yellowlogo.webp";
     }
     else if (selectedColor === "orange") {
-        burgerImg.src = "images/burger.png"; 
-        logoImg.src = "images/logo.png";
+        burgerImg.src = "images/burger.webp"; 
+        logoImg.src = "images/logo.webp";
     }
     else if (selectedColor === "lime") {
-      burgerImg.src = "images/limeburger.png"; 
-      logoImg.src = "images/limelogo.png";
+      burgerImg.src = "images/limeburger.webp"; 
+      logoImg.src = "images/limelogo.webp";
     }else if (selectedColor === "lavender") {
-      burgerImg.src = "images/lavenderburger.png"; 
-      logoImg.src = "images/lavenderlogo.png";
+      burgerImg.src = "images/lavenderburger.webp"; 
+      logoImg.src = "images/lavenderlogo.webp";
     }
   }
   applyThemeAndColor();
