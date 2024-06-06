@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // List of all available pages and their details
     const pages = [
-        { title: "Top Warframe Platinum Farm for Beginners", url: "plat.html", imgSrc: "images/1.png" },
-        { title: "Warframe Void Fissures Guide", url: "fissures.html", imgSrc: "images/2.png" },
-        { title: "The Best Warframe Builds for Void Fissures", url: "buildsforfissures.html", imgSrc: "images/builds.png" }
+        { title: "Top Warframe Platinum Farm for Beginners", url: "plat.html", imgSrc: "images/1.webp" },
+        { title: "Warframe Void Fissures Guide", url: "fissures.html", imgSrc: "images/2.webp" },
+        { title: "The Best Warframe Builds for Void Fissures", url: "buildsforfissures.html", imgSrc: "images/builds.webp" }
     ];
 
     const params = getUrlParams();

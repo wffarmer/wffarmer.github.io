@@ -17,6 +17,7 @@ const colors = ["white", "red", "blue", "orange", "yellow", "lime", "lavender"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
+const support = document.querySelector(".support");
 const imageUrls = ["/images/icon.webp", 
 "/images/whiteburger.webp", "/images/whitelogo.webp", 
 "/images/lightburger.webp", "/images/lightlogo.webp", 
@@ -94,10 +95,14 @@ function preloadImages(urls) {
 
 $(document).ready(function() {
   $('.maintext').hide();
+  if(support){
+  $('.support').hide();
+  }
   $('.disclaimer').hide();
   $('.topmenu').hide();
   $('.content').hide();
   $('.footer').hide();
+  
 });
 
 $(window).on('load', function() {
@@ -116,7 +121,13 @@ $(window).on('load', function() {
   $('.content').show();
     footer.style.display = "flex";
   $('.footer').show();
+
+  if(support){
+  support.style.display = "inline-block";
+  $('.support').show()
+  }
   searchInput.value = "";
+  
 }, 100);
 });
 

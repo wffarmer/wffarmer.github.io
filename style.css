@@ -22,7 +22,7 @@
     --lightlinkcolor: #ff8424;
 }
 
-.topmenu, .maintext, .content, .footer, .disclaimer{
+.topmenu, .maintext, .content, .footer, .disclaimer, .support{
     display: none;
 }
 
@@ -54,17 +54,35 @@ a{
     height: 32.4px;
     height: 35px;
 }
-/*
-#brandname a{
-    color:white;
+
+
+.support{
+    background-color: #00d674 !important; /* Bright green */
+    
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    background:#00d674;
+    width: 300px;
+    max-width: 100vw;
+    left: calc(50% - 150px);
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    font-weight: 790;
+    transition: none !important;
+    margin-bottom: 50px;
 }
 
-#brandname a:hover{
-    cursor: pointer;
-    transition:ease-in-out 300ms;
-    color:#b2b2be
+.support span{
+    color: #fff !important; /* White text */
 }
-*/
+
 #links{
     display:block;
     position:relative;
@@ -666,7 +684,7 @@ color: var(--redtextcolor);
     line-height: 1.8;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px ) {
     .content ul{
         display: flex;
         flex-direction: column;
@@ -683,6 +701,11 @@ color: var(--redtextcolor);
         margin-left: 25px;
         margin-right:25px;
     }
+    
+  }
+
+  @media all and (orientation:portrait)
+  {
     .ninety, .eighty, .s5, .seventy, .sixty, .fifty, .forty, .thirty, .twenty, .ten{
         left: 0 !important;
         width: 100% !important;
