@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | Warframe.school</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="images/icon.webp">
+</head>
+
+<body>
+    <section class="theme">
+        <nav class="topmenu">
+            <div class="hamburgermenu" id="hamburger">
+                <img src="images/burger.webp" id="burgerbars" alt="menu">
+            </div>
+                <aside class="leftmenu">
+                    <h3>
+                        THEME
+                    </h3>
+                    <select name="theme" id="toggletheme">
+                        <option value="darktheme">Dark</option>
+                        <option value="lighttheme">Light</option>
+                    </select>
+                    <h4>
+                        TEXT COLOR
+                    </h4>
+                    <select name="color" id="togglecolor">
+                        <option value="white" id="white">White</option>
+                        <option value="red" id="red">Red</option>
+                        <option value="orange" id="orange">Orange</option>
+                        <option value="yellow" id="yellow">Yellow</option>
+                        <option value="lime" id="lime">Lime</option>
+                        <option value="blue" id="blue">Blue</option>
+                        <option value="lavender" id="lavender">Lavender</option>
+                    </select>
+                </aside>
+                <div class="logobox">
+                    <a id="logo" href="index.html">
+                        <img src="images/logo.webp" alt="warframe.school">
+                    </a>
+                </div>
+            <div class="searchbox">
+                <form id="searchform">
+                    <input type="text" placeholder="Search..." id="searcharea">
+                    <button type="submit" id="submit" title="Search">
+                        <i class="fa fa-search" aria-hidden="false"> </i>
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="disclaimer">
+            <span>
+                <b>Warframe.school</b>
+                <span id="dsc">is a fan site not associated with</span>
+                <b>Digital Extremes</b>
+            </span>
+            <button class="ok">
+                <div id="ok">
+                    <i class="fa fa-check" aria-hidden="false"> </i>
+                    <span>OK, I understand</span>
+                </div>
+            </button>
+        </div>
+        
+        <!-- content here -->
+        <div class="maintext">
+            <p id="toptitle">
+                
+            </p>
+        </div>
+        <div class="content">
+            <ul id="searchResultsList"></ul>
+        </div>
+
+        <div class="vertical-scrollbar">
+
+        </div>
+    
+        <div class="supportbox" >
+            <a class="support" href="support.html">
+            <span id="supportspan">Support Me</span>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <footer class="footer">
+                <div id="links">
+                    <p>
+                        <a href="about.html">About</a>&#160;-&#160;<a href="https://www.youtube.com/channel/UCbCnVusLJKTXNOus993pjNA" style="color:red;">YouTube</a>&#160;-&#160;<a href="giveaway.html" style="color: #00ff00">Giveaway</a>
+                    </p>
+                </div>
+            
+            <hr />
+            <div id="brandname">
+                <p>
+                    2024 &#169; <a href="index.html">Warframe.school&#160;</a>-<a href="contactus.html">&#160;Contact Us</a>
+                </p>
+            </div>
+            <div class="footerdisclaimer">
+                <p>
+                    Use of this site constitutes acceptance of the site's <a href="tos.html">Terms of Service</a> and <a href="privacypolicy.html">Privacy Policy</a>. <br><br> This site has no official link with Digital Extremes or Warframe, and all recognizable features of the intellectual property relating to the trademarks Digital Extremes Ltd. and/or Warframe are the intellectual property of Digital Extremes Ltd.
+                </p>
+            </div>
+            </footer>
+        
+    </section>
+    <script src="script.js"></script>
+    <script src="searchresults.js"></script>
+</body>
+
+
+
+</html>
+
+
