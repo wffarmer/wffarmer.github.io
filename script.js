@@ -12,13 +12,13 @@ const links = document.querySelectorAll(".content a");
 storedTheme = localStorage.getItem("selectedTheme");
 if(!storedTheme){
   storedTheme = "darktheme";
-  localStorage.setItem("SelectedTheme", "darktheme");
+  localStorage.setItem("selectedTheme", "darktheme");
 }
 
 storedColor = localStorage.getItem("selectedColor"); 
 if(!storedColor){
-  storedColor = "white"
-  localStorage.setItem("SelectedColor", "white");
+  storedColor = "white";
+  localStorage.setItem("selectedColor", "white");
 }
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
