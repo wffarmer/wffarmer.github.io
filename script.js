@@ -13,20 +13,16 @@ const storedColor = localStorage.getItem("selectedColor");
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
-const colors = ["white", "red", "blue", "orange", "yellow", "lime", "lavender"];
+const colors = ["white", "teal", "sakura"];
 const searchForm = document.getElementById("searchform");
 const searchInput = document.getElementById("searcharea");
 const elements = document.querySelectorAll(".content ul li p");
 const support = document.querySelector(".support");
 const imageUrls = ["/images/icon.webp", 
-"/images/whiteburger.webp", "/images/whitelogo.webp", 
 "/images/lightburger.webp", "/images/lightlogo.webp", 
 "/images/burger.webp", "/images/logo.webp", 
-"/images/yellowlogo.webp", "/images/yellowburger.webp", 
-"/images/limelogo.webp", "/images/limeburger.webp", 
-"/images/lavenderlogo.webp", "/images/lavenderburger.webp",
-"/images/bluelogo.webp", "/images/blueburger.webp", 
-"/images/redlogo.webp", "/images/redburger.webp", 
+"/images/teallogo.webp", "/images/tealburger.webp", 
+"/images/sakuralogo.webp", "/images/sakuraburger.webp",
 "/images/1.webp", "/images/2.webp", "/images/builds.webp", 
 "/images/can.webp", "/images/wts.webp", "/images/dongo.webp", "/images/freerev.webp", "/images/hub.webp", "/images/ashset.webp",
 "/images/junk288.webp", "/images/junk373.webp", "/images/goodprimes.webp", "/images/filters.webp", 
@@ -217,7 +213,7 @@ themeSelect.addEventListener("change", function() {
   
     const burgerImg = document.getElementById("burgerbars");
     const logoImg = document.getElementById("logo").querySelector("img");
-    const logoSuffix = color === "orange" ? "" : `${color.toLowerCase()}`;
+    const logoSuffix = color === "white" ? "" : `${color.toLowerCase()}`;
 
 
     if (selectedTheme === "darktheme") {
@@ -270,9 +266,9 @@ themeSelect.addEventListener("change", function() {
       }
   });
   if(darktheme !== null){
-    footer.classList.remove("white", "red", "blue", "orange", "yellow", "lime", "lavender");
-    content.classList.remove("white", "red", "blue", "orange", "yellow", "lime", "lavender");
-    topmenu.classList.remove("white", "red", "blue", "orange", "yellow", "lime", "lavender");
+    footer.classList.remove("white", "teal", "sakura");
+    content.classList.remove("white", "teal", "sakura");
+    topmenu.classList.remove("white", "teal", "sakura");
     if (selectedColor) { 
       darktheme.classList.add(selectedColor);
       footer.classList.add(selectedColor);
@@ -290,31 +286,16 @@ themeSelect.addEventListener("change", function() {
       content.classList.add("white");
       leftmenu.classList.add("white");
     }
-    
-    if (selectedColor === "red") {
-        burgerImg.src = "images/redburger.webp"; 
-        logoImg.src = "images/redlogo.webp";
-    } else if (selectedColor === "white") {
-        burgerImg.src = "images/whiteburger.webp"; 
-        logoImg.src = "images/whitelogo.webp";
-    } else if (selectedColor === "blue") {
-        burgerImg.src = "images/blueburger.webp"; 
-        logoImg.src = "images/bluelogo.webp";
-    } 
-    else if (selectedColor === "yellow") {
-      burgerImg.src = "images/yellowburger.webp"; 
-      logoImg.src = "images/yellowlogo.webp";
-    }
-    else if (selectedColor === "orange") {
-        burgerImg.src = "images/burger.webp"; 
-        logoImg.src = "images/logo.webp";
-    }
-    else if (selectedColor === "lime") {
-      burgerImg.src = "images/limeburger.webp"; 
-      logoImg.src = "images/limelogo.webp";
-    }else if (selectedColor === "lavender") {
-      burgerImg.src = "images/lavenderburger.webp"; 
-      logoImg.src = "images/lavenderlogo.webp";
+  
+    if (selectedColor === "white") {
+      burgerImg.src = "images/burger.webp"; 
+      logoImg.src = "images/logo.webp";
+    }else if (selectedColor === "teal") {
+      burgerImg.src = "images/tealburger.webp"; 
+      logoImg.src = "images/teallogo.webp";
+    }else if (selectedColor === "sakura") {
+      burgerImg.src = "images/sakuraburger.webp"; 
+      logoImg.src = "images/sakuralogo.webp";
     }
   }
   applyThemeAndColor();
