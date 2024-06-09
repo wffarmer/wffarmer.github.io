@@ -8,14 +8,18 @@ const okButton = document.querySelector(".ok");
 const disclaimer = document.querySelector(".disclaimer");  
 const content = document.querySelector(".content");
 const links = document.querySelectorAll(".content a");
-const storedTheme = localStorage.getItem("selectedTheme");
+
+storedTheme = localStorage.getItem("selectedTheme");
 if(!storedTheme){
-  storedTheme = "Dark"
+  storedTheme = "darktheme";
+  localStorage.setItem("SelectedTheme", "darktheme");
 }
-const storedColor = localStorage.getItem("selectedColor"); 
-if(!storedTheme){
-  storedTheme = "White"
-} 
+
+storedColor = localStorage.getItem("selectedColor"); 
+if(!storedColor){
+  storedColor = "white"
+  localStorage.setItem("SelectedColor", "white");
+}
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
