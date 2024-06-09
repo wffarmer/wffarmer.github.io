@@ -29,9 +29,7 @@ const imageUrls = ["/images/icon.webp",
 "/images/panzer.webp", "/images/titania1.webp", "/images/poise.webp", "/images/dexpixia.webp", 
 
 
- 
-
-];
+ ];
 const searchResultsList = document.getElementById("searchResultsList");
 const pages = [ 
   {title:"Top Warframe Platinum Farm for Beginners", url:"plat.html"}, 
@@ -39,7 +37,28 @@ const pages = [
   {title:"Strong Warframe Builds for Quick Void Fissures", url:"buildsforfissures.html"}
 ];
 
+function applyThemeAndColor() {
+  const selectedTheme = themeSelect.value || "darktheme"; // Default to darktheme
+  const selectedColor = colorSelect.value || "white"; // Default to white
 
+  theme.className = "theme"; // Reset class names
+
+  theme.classList.add(selectedTheme);
+  theme.classList.add(selectedColor);
+  topmenu.classList.add(selectedTheme);
+  topmenu.classList.add(selectedColor);
+  leftmenu.classList.add(selectedTheme);
+  leftmenu.classList.add(selectedColor);
+  footer.classList.add(selectedTheme);
+  footer.classList.add(selectedColor);
+  content.classList.add(selectedTheme);
+  content.classList.add(selectedColor);
+}
+
+function saveSettingsToLocalStorage() {
+  localStorage.setItem("selectedTheme", themeSelect.value || "darktheme");
+  localStorage.setItem("selectedColor", colorSelect.value || "white");
+}
 
 disclaimershow = localStorage.getItem("disclaimershow");
 if(localStorage.getItem("disclaimershow") !== "true" && localStorage.getItem("disclaimershow") !== "false")
@@ -133,29 +152,6 @@ function replaceNewlinesWithBreaks(text) {
 
 if (!theme.classList.contains("darktheme") && !theme.classList.contains("lighttheme")) {
   theme.classList.add("darktheme");
-}
-
-function saveSettingsToLocalStorage() {
-  localStorage.setItem("selectedTheme", themeSelect.value || "darktheme");
-  localStorage.setItem("selectedColor", colorSelect.value || "white");
-}
-
-function applyThemeAndColor() {
-  const selectedTheme = themeSelect.value || "darktheme"; // Default to darktheme
-  const selectedColor = colorSelect.value || "white"; // Default to white
-
-  theme.className = "theme"; // Reset class names
-
-  theme.classList.add(selectedTheme);
-  theme.classList.add(selectedColor);
-  topmenu.classList.add(selectedTheme);
-  topmenu.classList.add(selectedColor);
-  leftmenu.classList.add(selectedTheme);
-  leftmenu.classList.add(selectedColor);
-  footer.classList.add(selectedTheme);
-  footer.classList.add(selectedColor);
-  content.classList.add(selectedTheme);
-  content.classList.add(selectedColor);
 }
 
 themeSelect.addEventListener("change", function() {
