@@ -8,18 +8,6 @@ const okButton = document.querySelector(".ok");
 const disclaimer = document.querySelector(".disclaimer");  
 const content = document.querySelector(".content");
 const links = document.querySelectorAll(".content a");
-
-storedTheme = localStorage.getItem("selectedTheme");
-if(!storedTheme){
-  storedTheme = "darktheme";
-  localStorage.setItem("selectedTheme", "darktheme");
-}
-
-storedColor = localStorage.getItem("selectedColor"); 
-if(!storedColor){
-  storedColor = "white";
-  localStorage.setItem("selectedColor", "white");
-}
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
@@ -148,16 +136,15 @@ if (!theme.classList.contains("darktheme") && !theme.classList.contains("lightth
 }
 
 function saveSettingsToLocalStorage() {
-  localStorage.setItem("selectedTheme", themeSelect.value);
-  localStorage.setItem("selectedColor", colorSelect.value);
+  localStorage.setItem("selectedTheme", themeSelect.value || "darktheme");
+  localStorage.setItem("selectedColor", colorSelect.value || "white");
 }
 
 function applyThemeAndColor() {
-  const selectedTheme = themeSelect.value;
-  const selectedColor = colorSelect.value;
+  const selectedTheme = themeSelect.value || "darktheme"; // Default to darktheme
+  const selectedColor = colorSelect.value || "white"; // Default to white
 
-  
-  theme.className = "theme";
+  theme.className = "theme"; // Reset class names
 
   theme.classList.add(selectedTheme);
   theme.classList.add(selectedColor);
@@ -176,11 +163,22 @@ themeSelect.addEventListener("change", function() {
   saveSettingsToLocalStorage();
 });
 
+storedColor = localStorage.getItem("selectedColor");
+storedTheme = localStorage.getItem("selectedTheme");
+
 if (storedTheme) {
   themeSelect.value = storedTheme;
 }
+else{
+  themeSelect.value = "darktheme";
+  storedTheme = themeSelect.value;
+}
 if (storedColor) {
   colorSelect.value = storedColor;
+}
+else{
+  colorSelect.value = "white";
+  storedColor = colorSelect.value;
 }
 
 applyThemeAndColor();
