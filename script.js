@@ -9,7 +9,13 @@ const disclaimer = document.querySelector(".disclaimer");
 const content = document.querySelector(".content");
 const links = document.querySelectorAll(".content a");
 const storedTheme = localStorage.getItem("selectedTheme");
-const storedColor = localStorage.getItem("selectedColor");  
+if(!storedTheme){
+  storedTheme = "Dark"
+}
+const storedColor = localStorage.getItem("selectedColor"); 
+if(!storedTheme){
+  storedTheme = "White"
+} 
 const iframe = document.querySelector(".content iframe");
 const maintext = document.querySelector(".maintext");
 const footer = document.querySelector(".footer");
@@ -138,18 +144,9 @@ if (!theme.classList.contains("darktheme") && !theme.classList.contains("lightth
 }
 
 function saveSettingsToLocalStorage() {
-  if(colorSelect.value === null)
-  {
-    localStorage.setItem("selectedColor", "White")
-  }
-  if(themeSelect.value === null)
-  {
-  localStorage.setItem("selectedTheme", "Dark")
-  }
-  else{
   localStorage.setItem("selectedTheme", themeSelect.value);
   localStorage.setItem("selectedColor", colorSelect.value);
-}}
+}
 
 function applyThemeAndColor() {
   const selectedTheme = themeSelect.value;
