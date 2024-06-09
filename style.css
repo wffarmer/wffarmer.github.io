@@ -116,12 +116,6 @@ background-color: var(--darkbg);
     color: var(--darklinkcolor);
 }
 
-.darktheme a:hover{
-    cursor:pointer;
-    transition: ease-in-out 0.3s;
-    color: #11dfff;
-}
-
 .lighttheme{
     background-color: var(--lightbg);
     color: var(--lightbgtext);
@@ -133,20 +127,6 @@ background-color: var(--darkbg);
 }
 
 .lighttheme.content a{
-    color:var(--lightlinkcolortimedotcom);
-}
-
-.lighttheme.footer a:hover{
-    color: #ff9e03;
-    cursor:pointer;
-    transition: ease-in-out 0.3s;
-}
-
-.lighttheme.content a:hover{
-    color: var(--lightlinkcolortimedotcom);
-}
-
-.lighttheme.content a:hover{
     color:var(--lightlinkcolortimedotcom);
 }
 
@@ -194,7 +174,7 @@ background-color: var(--darkbg);
     padding-bottom: 2.8px;
     padding-top: 2.8px;
     background-clip: content-box;
-    background-color: var(--redtextcolor);
+    background-color: color-mix(in srgb, #9f9f9f 50%, black 50%);
     display: inline-block;
 }
 
@@ -253,12 +233,7 @@ background-color: var(--darkbg);
     background-color: #9f9f9f;
     background-color: color-mix(in srgb, #9f9f9f 50%, black 50%);
     border: none;
-}
-
-.ok:hover{
     cursor: pointer;
-    background-color: color-mix(in srgb, #9f9f9f 30%, black 70%);
-    transition: ease-in-out 300ms;
 }
 
 button span{
@@ -315,11 +290,6 @@ button span{
 
 button i{
     color: white;
-}
-
-#submit:hover{
-    background-color: color-mix(in srgb, var(--redtextcolor) 80%, black 20%);
-    transition: ease-in-out 300ms;
 }
 
 
@@ -400,35 +370,16 @@ display: block;
     color: var(--lavendertextcolor);
 }
 
-#lavender:hover{
-    color: var(--lavendertextcolor);
-}
-
 #lime{
     color: var(--limetextcolor);
 }
 
-#lime:hover{
-    color: var(--limetextcolor);
-}
 
 #yellow{
     color: var(--yellowtextcolor);
 }
 
-#yellow:hover{
-    color: var(--yellowtextcolor);
-}
-
-#orange:hover{
-    color: var(--orangetextcolor);
-}
-
 #red{
-    color: var(--redtextcolor);
-}
-
-#red:hover{
     color: var(--redtextcolor);
 }
 
@@ -436,15 +387,7 @@ display: block;
 color: var(--bluetextcolor);
 }
 
-#blue:hover{
-    color: var(--bluetextcolor);
-}
-
 #white{
-    color: var(--whitetextcolor);
-}
-
-#white:hover{
     color: var(--whitetextcolor);
 }
 
@@ -539,10 +482,6 @@ ul {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color:black;
-}
-
-.content.lighttheme ul li a:hover{
     color:black;
 }
 
