@@ -13,6 +13,7 @@
     --tealtextcolor: #22bacf;
     --whitetextcolor: #fff;
     --sakuratextcolor: #ffb7c5;
+    --limetextcolor: #A7F432;
     --darklinkcolor: var(--sakuratextcolor);
     --lightlinkcolortimedotcom: #e90606;
 }
@@ -107,8 +108,8 @@ margin: 0;
 background-color: var(--darkbg);
 }
 
-.darktheme a{
-    color: var(--darklinkcolor);
+.darktheme.content a{
+    color: var(--limetextcolor);
 }
 
 .lighttheme{
@@ -126,7 +127,7 @@ background-color: var(--darkbg);
 }
 
 footer a{
-    color:var(--darklinkcolor);
+    color:var(--sakuratextcolor) ;
 }
 
 .topmenu{
