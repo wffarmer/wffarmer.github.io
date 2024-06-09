@@ -148,6 +148,13 @@ function applyThemeAndColor() {
   const selectedTheme = themeSelect.value;
   const selectedColor = colorSelect.value;
 
+  if(selectedColor === null)
+    {
+      selectedColor = "White"
+    }if(selectedTheme === null)
+      {
+        selectedTheme = "Dark"
+      }
   theme.className = "theme";
 
   theme.classList.add(selectedTheme);
