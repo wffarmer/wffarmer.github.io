@@ -133,28 +133,29 @@ function replaceNewlinesWithBreaks(text) {
   return text.replace(/\\n/g, '<br>');
 }
 
-if (!theme.classList.contains("darktheme")) {
-  leftmenu.classList.add("darktheme");
-  footer.classList.add("darktheme");
-  content.classList.add("darktheme");
+if (!theme.classList.contains("darktheme") && !theme.classList.contains("lighttheme")) {
+  theme.classList.add("darktheme");
 }
 
 function saveSettingsToLocalStorage() {
+  if(colorSelect.value === null)
+  {
+    localStorage.setItem("selectedColor", "White")
+  }
+  if(themeSelect.value === null)
+  {
+  localStorage.setItem("selectedTheme", "Dark")
+  }
+  else{
   localStorage.setItem("selectedTheme", themeSelect.value);
   localStorage.setItem("selectedColor", colorSelect.value);
-}
+}}
 
 function applyThemeAndColor() {
   const selectedTheme = themeSelect.value;
   const selectedColor = colorSelect.value;
 
-  if(selectedColor === null)
-    {
-      selectedColor = "White"
-    }if(selectedTheme === null)
-      {
-        selectedTheme = "Dark"
-      }
+  
   theme.className = "theme";
 
   theme.classList.add(selectedTheme);
